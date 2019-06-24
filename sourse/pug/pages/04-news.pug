@@ -1,0 +1,52 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-work/_s-work.pug
+include ../blocks/side-blocks/_side-blocks.pug
+
+block title
+	title Новости
+
+block pagecontent
+	.main-wrapper(style="background-image: url(../img/header-bg-2.jpg)")
+		//- +mob-mnu()
+
+		+header()
+			+top-line()
+			+top-nav()
+			+header-block-2("Статьи и новости","img/newspaper.png")
+
+		.container.main
+			+breadcrumb("Главная","Статьи")
+			.row
+				.col-xl.middle-col
+					.h2.second-font.page-title Статьи о&nbsp;медицинских документах, <br>которые мы&nbsp;оформляем
+					+news-block-main-2()
+					+news-block-main-2()
+					+news-block-main-2()
+					+news-block-main-2()
+					+news-block-main-mini()
+					+news-block-main-2()
+					+news-block-main-2()
+					+news-block-main-2()
+					+news-block-main-2()
+					+pugin()
+				.col-xl-auto.order-xl-first.col-md-6
+					+side-nav()
+					+side-reviews("Последние отзывы")
+					+side-price("Прайс-лист справок")
+					+side-ask("Вопрос-ответ")
+				.col-xl-auto.col-md-6
+					+side-order("Заказать медсправку")
+					+side-search.d-none.d-xl-block()
+					+side-stats()
+					+side-order-deliver
+					+side-order-call("Обратный звонок")
+					+side-share()
+					
+					
+		+footer()
+		+bottom-line()
+

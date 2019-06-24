@@ -1,0 +1,61 @@
+mixin header-block(t)
+	// start header-block
+	+b.header-block#header-block
+		.container
+			.row.align-items-end
+				+e.photo.col-4.d-none.d-xl-block
+					img(src="img/header-2.jpg", alt="#")
+				+e.col.col-12.col-xl
+					h1 Все Медицинские <br>справки и анализы
+					ul
+						li Официально
+						li Без посещения врачей
+						li За 1 день
+					.row
+						.col
+							+e.btn(href="#")
+								img.btn_image(src="img/add.svg", alt="#") 
+								|Заказать документ
+						.col.d-none.d-xl-block
+							img(src="img/docs.png", alt="#")
+					
+
+	// end header-block
+
+
+mixin header-block-city(c)
+	// start header-block
+	+b.header-block#header-block
+		.container
+			.row.align-items-end
+				+e.photo.col-4.d-none.d-xl-block
+					img(src="img/header-2.jpg", alt="#")
+				+e.col.col-12.col-xl
+					h1 Все Медицинские справки и анализы
+					+e.H1.city-title=c
+					ul
+						li Официально
+						li Без посещения врачей
+						li За 1 день
+					.row
+						.col
+							+e.btn(href="#")
+								img.btn_image(src="img/add.svg", alt="#") 
+								|Заказать документ
+						.col.d-none.d-xl-block
+							img(src="img/docs.png", alt="#")
+					
+
+	// end header-block
+
+mixin header-block-2(t,i,s)
+	// start header-block
+	+b.header-block-2.header-block#header-block
+		.container
+			+e.title.second-font.h1=t
+				+e.title.subtitle.second-font.h1=s
+			+e.IMG.image.d-none.d-xl-block(src=i, alt="#")
+						
+					
+
+	// end header-block

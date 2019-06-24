@@ -1,0 +1,531 @@
+mixin side-nav()
+	// start side-nav
+	+b.side-nav#side-nav&attributes(attributes)
+		.accordion-menu
+			ul.menu
+				mixin item-has(t)
+					li.menu-item.menu-item-has-children
+						a(href="#")= t
+						
+						block
+				mixin sub() 
+					ul.sub-menu
+						li.menu-item
+							a(href="#") Медицинская справка 086 у
+						li.menu-item
+							a(href="#") Медицинская справка 082 у
+						li.menu-item
+							a(href="#") Медицинская справка 095 у
+						li.menu-item
+							a(href="#") Медицинская справка 026 у
+						li.menu-item
+							a(href="#") Медицинская справка 027 у
+						li.menu-item
+							a(href="#") Медицинская справка 001 гс у
+						li.menu-item
+							a(href="#") Медицинская справка КЭК
+						li.menu-item
+							a(href="#") Освобождение от физкультуры
+						li.menu-item
+							a(href="#") Медицинская справка в бассейн
+						li.menu-item
+							a(href="#") Медицинская справка для занятий спортом
+						li.menu-item
+							a(href="#") Медицинская справка для участия в соревнованиях
+						li.menu-item
+							a(href="#") Медицинские справки для академического отпуска
+						li.menu-item
+							a(href="#") Медицинская справка о кодировании от алкоголизма
+						li.menu-item
+							a(href="#") Медицинская справка от врача специалиста
+						li.menu-item
+							a(href="#") Медицинская справка 
+						li.menu-item
+							a(href="#") свободной формы
+						li.menu-item
+							a(href="#") Медицинская справка 070 у
+						li.menu-item
+							a(href="#") Медицинская справка 072 у 04
+						li.menu-item
+							a(href="#") Медицинская справка 076 у 04
+						li.menu-item
+							a(href="#") Медицинская справка 079 у
+						li.menu-item
+							a(href="#") Медицинская справка	о контактах (эпидокружении)
+						li.menu-item
+							a(href="#") Водительская медицинская справка
+						li.menu-item
+							a(href="#") Медицинская справка в ГАИ
+						li.menu-item
+							a(href="#") Медицинская справка для ГИБДД
+						li.menu-item
+							a(href="#") Медицинская справка 002 о/у на оружие
+						li.menu-item
+							a(href="#") Медицинская справка на оружие 046-1
+						li.menu-item
+							a(href="#") Медицинская справка для УФМС
+						li.menu-item
+							a(href="#") Медицинская справка для получения РВП
+						li.menu-item
+							a(href="#") Медицинская справка на гостайну 989 н
+						li.menu-item
+							a(href="#") Справка на установление инвалидности МСЭ
+						li.menu-item
+							a(href="#") Медицинская справка для опеки 164 у
+						li.menu-item
+							a(href="#") Медицинская справка формы 297
+						li.menu-item
+							a(href="#") Медицинская справка 302 н
+						li.menu-item
+							a(href="#") Детская медицинская справка после болезни ребенка
+						li.menu-item
+							a(href="#") Медицинская справка о беременности
+						li.menu-item
+							a(href="#") Медицинская справка от гинеколога
+						li.menu-item
+							a(href="#") Медицинская справка от стоматолога
+						li.menu-item
+							a(href="#") Медицинская справка от фтизиатра
+						li.menu-item
+							a(href="#") Медицинская справка о сделанных прививках
+						li.menu-item
+							a(href="#") Медицинская справка о прививках 063 у
+						li.menu-item
+							a(href="#") Справка для спортивной школы ФАУ МО РФ ЦСКА
+						li.menu-item
+							a(href="#") Медицинские справки из диспансеров	 
+				+item-has(' Справки для Взрослых')
+					+sub()
+	
+				+item-has(' Справки для детей')
+					+sub()
+				
+				+item-has(' Результаты анализов')
+					+sub()
+				
+				+item-has(' Заключения')
+					+sub()
+				
+				+item-has(' Выписки')
+					+sub() 
+				
+				+item-has(' Медицинские карты')
+					+sub() 
+				
+				+item-has(' Медицинские книжки ')
+					+sub() 
+
+	// end side-nav
+
+
+mixin price-accordion()
+	// price-accordion
+	+b.side-nav.price-accordion&attributes(attributes)
+		.accordion-menu
+			ul.menu
+				mixin price-list-item-light(f, s)
+					+b.price-list-item
+						+e.name= f
+						+e.price= s
+						+e.A.order.second-font(href="#") заказать 
+				mixin price-list-item-dark(f, s)
+					+b.price-list-item.price-dark
+						+e.name= f
+						+e.price= s
+						+e.A.order.second-font(href="#") заказать 
+				mixin item-has(t)
+					li.menu-item.menu-item-has-children
+						a(href="#")= t
+						
+						block
+				mixin sub() 
+					.sub-menu.price-container
+						+b.price-list-header.second-font
+							+e.name Наименование
+							+e.price Цена, руб.
+							+e.order Заказ
+						+price-list-item-light("Медицинская справка 095 у", "2000")
+						+price-list-item-dark("Медицинская справка для занятий спортом", "5000")
+						+price-list-item-light("Медицинская справка о кодировании от алкоголизма", "14000")
+						+price-list-item-dark("Медицинская справка 082 у", "2000")
+						+price-list-item-light("Медицинская справка 001 гс у", "2000")
+						+price-list-item-dark("Освобождение от физкультуры", "2000")
+						+price-list-item-light("Медицинская справка свободной формы", "2000")
+						+price-list-item-dark("Водительская медицинская справка", "2000")
+						+price-list-item-light("Медицинская справка 095 у", "2000")
+						+price-list-item-dark("Медицинская справка для занятий спортом", "5000")
+						+price-list-item-light("Медицинская справка 095 у", "2000")
+						+price-list-item-dark("Медицинская справка для занятий спортом", "5000")
+						+price-list-item-light("Медицинская справка о кодировании от алкоголизма", "14000")
+						+price-list-item-dark("Медицинская справка 082 у", "2000")
+						+price-list-item-light("Медицинская справка 001 гс у", "2000")
+						+price-list-item-dark("Освобождение от физкультуры", "2000")
+						+price-list-item-light("Медицинская справка свободной формы", "2000")
+						+price-list-item-dark("Водительская медицинская справка", "2000")
+						+price-list-item-light("Медицинская справка 095 у", "2000")
+						+price-list-item-dark("Медицинская справка для занятий спортом", "5000")
+						
+						 
+				+item-has(' Справки для Взрослых')
+					+sub()
+	
+				+item-has(' Справки для детей')
+					+sub()
+				
+				+item-has(' Результаты анализов')
+					+sub()
+				
+				+item-has(' Заключения')
+					+sub()
+				
+				+item-has(' Выписки')
+					+sub() 
+				
+				+item-has(' Медицинские карты')
+					+sub() 
+				
+				+item-has(' Медицинские книжки ')
+					+sub() 
+
+	// end price-accordion
+
+
+mixin side-order(t)
+	// start side-order
+	+b.side-order.side-block#side-order&attributes(attributes)
+		.side-title= t 
+		.side-main
+			+form-wrap
+				+input("","Ваше ФИО")
+				+input("","Ваш номер телефона")
+				+e.input-wrap.form-group
+					+e.SELECT.input.form-control
+						option.d-none(disabled selected) Выберите город
+						option 1
+						option 1
+						option 1
+				+ta("Ваши даные по справке")
+			a.btn-side.order(href="#")
+				img.btn_image(src="img/order.svg", alt="#") 
+				|Оформить заказ
+
+	// end side-order
+
+mixin side-order-call(t)
+	// start side-order-call
+	+b.side-order.side-block#side-order-call&attributes(attributes)
+		.side-title= t 
+		.side-main
+			+form-wrap
+				+input("","Ваш номер телефона")
+				+input("","В какое время Вам удобно?")
+			a.btn-side.order.order-call(href="#")
+				img.btn_image(src="img/002-support.svg", alt="#") 
+				|Перезвоните мне
+
+	// end side-order-call
+
+mixin side-video(t)
+	// start side-video
+	+b.side-video.side-block#side-video&attributes(attributes)
+		.side-title= t 
+		.side-main
+			.video-wrap
+				iframe(src='https://www.youtube.com/embed/zlv-BFbFOUs')
+			a.btn-side.docs(href="#")
+				img.btn_image(src="img/add.svg", alt="#") 
+				|Заказать документ
+	// end side-video
+
+mixin side-news(t)
+	// start side-news
+	+b.side-news.side-block#side-news&attributes(attributes)
+		.side-title= t
+		.side-main
+			.news-block
+				img(src="img/news-photo.jpg", alt="#") 
+				.news-title Как и где заказать справку
+				.news-main Посещать врачей важно для проверки здоровья. Но часто бывает так, что эта мера нужна только ради соблюдения строгих порядков оформления в различные учреждения.
+				a(href="#") Читать далее>>
+
+			.news-block
+				img(src="img/news-photo.jpg", alt="#") 
+				.news-title Как и где заказать справку
+				.news-main Посещать врачей важно для проверки здоровья. Но часто бывает так, что эта мера нужна только ради соблюдения строгих порядков оформления в различные учреждения.
+				a(href="#") Читать далее>>
+
+			.news-block
+				img(src="img/news-photo.jpg", alt="#") 
+				.news-title Как и где заказать справку
+				.news-main Посещать врачей важно для проверки здоровья. Но часто бывает так, что эта мера нужна только ради соблюдения строгих порядков оформления в различные учреждения.
+				a(href="#") Читать далее>>
+			.another Другие статьи по теме
+			.news-block
+				.news-how
+					.news-title Как и где заказать справку?
+					a(href="#") Читать статью>>
+				.news-how
+					.news-title Как и где заказать справку?
+					a(href="#") Читать статью>>
+				.news-how
+					.news-title Как и где заказать справку?
+					a(href="#") Читать статью>>
+				.news-how
+					.news-title Как и где заказать справку?
+					a(href="#") Читать статью>>
+				.news-how
+					.news-title Как и где заказать справку?
+					a(href="#") Читать статью>>
+				.news-how
+					.news-title Как и где заказать справку?
+					a(href="#") Читать статью>>
+			
+			a.read-all(href="#") Читать все статьи
+				
+	// end side-news
+
+mixin side-search()
+	// start side-search
+	+b.side-search.side-block#side-search&attributes(attributes)
+				
+	// end side-search
+
+mixin side-reviews(t)
+	// start side-reviews
+	+b.side-reviews.side-block#side-reviews&attributes(attributes)
+		.side-title= t
+		.side-main
+			.review-block
+				img(src="img/review.png", alt="#") 
+				.review-title Елена, г. Новосибирск
+				.review-main Обещали сделать справку за сутки, однако к вечеру она уже была у меня. Все расходы окупились первой же зарплатой!
+				a(href="#") Читать далее>>
+
+			.review-block
+				img(src="img/review.png", alt="#") 
+				.review-title Елена, г. Новосибирск
+				.review-main Обещали сделать справку за сутки, однако к вечеру она уже была у меня. Все расходы окупились первой же зарплатой!
+				a(href="#") Читать далее>>
+				
+			.review-block
+				img(src="img/review.png", alt="#") 
+				.review-title Елена, г. Новосибирск
+				.review-main Обещали сделать справку за сутки, однако к вечеру она уже была у меня. Все расходы окупились первой же зарплатой!
+				a(href="#") Читать далее>>
+				
+			a.read-all(href="#") Читать все статьи
+
+			a.btn-side.docs(href="#")
+				img.btn_image(src="img/document.svg", alt="#") 
+				|Оставить отзыв
+	// end side-reviews
+
+
+mixin side-stats()
+	// start side-stats
+	+b.side-stats.side-block#side-stats&attributes(attributes)
+		.stats-top
+			img(src="img/doctor1.jpg", alt="#")
+		.stats-main
+			img.stats-bg(src="img/stats-bg.jpg", alt="#")
+			.stats-item
+				.stats-left 2500+
+				.stats-right довольных клиентов
+			.stats-item
+				.stats-left 100 %
+				.stats-right подлинность документа
+			.stats-item
+				.stats-left 1 ДЕНЬ
+				.stats-right на создание и доставку
+			.stats-item
+				.stats-left УДОБНЫЕ
+				.stats-right способы оплаты для Вашего заказа
+			.stats-item
+				.stats-left ЛУЧШАЯ
+				.stats-right стоимость в регионе
+			.stats-item
+				.stats-left ОНЛАЙН
+				.stats-right для Вас подача заявки
+			a.btn-side.docs(href="#")
+				img.btn_image(src="img/add.svg", alt="#") 
+				|Заказать документ
+
+	// end side-stats
+
+
+mixin side-price(t)
+	// start side-price
+	+b.side-price.side-block#side-price&attributes(attributes)
+		.side-title= t
+		.side-main
+			.price-block
+				.price-left
+					.price-title Наименование
+					.price-item 095/у
+					.price-item 095/у
+					.price-item 095/у
+					.price-item 095/у
+					.price-item 095/у
+					.price-item 095/у
+					.price-item 095/у
+					.price-item 095/у
+				.price-right
+					.price-title Цена, руб.
+					.price-item 2000
+					.price-item 2000
+					.price-item 2000
+					.price-item 2000
+					.price-item 2000
+					.price-item 2000
+					.price-item 2000
+					.price-item 2000
+			a.btn-side.rub(href="#")
+				img.btn_image(src="img/rub.svg", alt="#") 
+				|Полный прайс-лист
+	// end side-price
+
+
+mixin side-ask(t)
+	// start side-ask
+	+b.side-ask.side-block#side-ask&attributes(attributes)
+		.side-title= t
+		.side-main
+			.ask-block
+				.ask-how
+					.ask-title 1.Как и где заказать справку?
+					a(href="#") Читать статью>>
+				.ask-how
+					.ask-title 2.Как и где заказать справку?
+					a(href="#") Читать статью>>
+				.ask-how
+					.ask-title 3.Как и где заказать справку?
+					a(href="#") Читать статью>>
+				.ask-how
+					.ask-title 4.Как и где заказать справку?
+					a(href="#") Читать статью>>
+			a.read-all(href="#") Читать все статьи
+			a.btn-side.question(href="#")
+				img.btn_image(src="img/question.svg", alt="#") 
+				|Задать вопрос
+	// end side-ask
+
+
+mixin side-ask-2(t)
+	// start side-ask
+	+b.side-ask.side-block#side-ask&attributes(attributes)
+		.side-title= t
+		.side-main
+			.ask-block
+				.ask-how
+					.ask-title 1.Как и где заказать справку?
+					a(href="#") Читать статью>>
+				.ask-how
+					.ask-title 2.Как и где заказать справку?
+					a(href="#") Читать статью>>
+				.ask-how
+					.ask-title 3.Как и где заказать справку?
+					a(href="#") Читать статью>>
+				.ask-how
+					.ask-title 4.Как и где заказать справку?
+					a(href="#") Читать статью>>
+			a.read-all(href="#") Смотреть все вопросы
+	// end side-ask
+
+
+mixin side-share()
+	// start side-share
+	+b.side-share.side-block#side-share&attributes(attributes)
+		.side-main
+			p Поделитесь страницей
+			<script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+			<script src="//yastatic.net/share2/share.js"></script>
+			<div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,moimir,twitter,blogger,linkedin"></div>
+	// end side-share
+
+
+mixin side-search()
+	// start side-search
+	+b.side-search.side-block#side-search&attributes(attributes)
+		+e.INPUT.search(type="search" name="q" placeholder="Поиск по сайту")
+		+e.INPUT.submit(type="image" src="img/search.png" alt="#")
+	// end side-search
+
+
+mixin side-from-to(t)
+	// start side-from-to
+	+b.side-from-to.side-block#side-from-to&attributes(attributes)
+		.side-title= t
+		.side-main
+			+e.UL.list
+				+e.LI.item
+					+e.IMG.item-image(src="img/work-1.svg", alt="#")
+					+e.item-title.second-font Обращение
+					+e.P.item-text Заполняете заявку на&nbsp;сайте или звоните по&nbsp;телефону.
+				+e.LI.item
+					+e.IMG.item-image(src="img/work-2.svg", alt="#")
+					+e.item-title.second-font Консультация
+					+e.P.item-text Ожидайте звонка оператора. Мы&nbsp;уточним все необходимые детали и&nbsp;сразу приступим к&nbsp;оформлению документа.
+				+e.LI.item
+					+e.IMG.item-image(src="img/work-3.svg", alt="#")
+					+e.item-title.second-font Оформление
+					+e.P.item-text Врач грамотно заполняет и&nbsp;выдаёт официально заполненную мед. документ на&nbsp;законных основаниях.
+					+e.P.item-text Наши специалисты все сделают в&nbsp;течение суток
+				+e.LI.item
+					+e.IMG.item-image(src="img/work-4.svg", alt="#")
+					+e.item-title.second-font Доставка
+					+e.P.item-text Бесплатная доставка Вашего документа курьерской службой и&nbsp;Вы оплачиваете нашу работу.
+					+e.P.item-text Курьерская служба доставляет справки только по&nbsp;рабочим дням!
+					+e.P.item-text Для Москвы доставка за&nbsp;МКАД возможна с&nbsp;доплатой от&nbsp;500 до&nbsp;1000&nbsp;рублей!
+			a.btn-side.docs(href="#")
+				img.btn_image(src="img/add.svg", alt="#") 
+				|Заказать документ
+	// end side-from-to
+
+
+mixin side-order-deliver(t)
+	// start side-order-deliver
+	+b.side-order-deliver.side-block#side-order-deliver&attributes(attributes)
+		.side-main
+			+e.title.second-font Оформим сегодня доставим завтра
+			+e.item
+				+e.IMG.image(src="img/syringe.svg", alt="#")
+				+e.item-title Не нужно тратить время
+				+e.item-main на&nbsp;запись к&nbsp;врачам, сдачу анализов и&nbsp;много других неприятных процедур.
+			+e.item
+				+e.IMG.image(src="img/tickets.svg", alt="#")
+				+e.item-title Никаких талончиков
+				+e.item-main номерков, угрюмых взглядов в&nbsp;поликлинике&nbsp;&mdash; наши сотрудники ценят комфорт клиентов!
+			+e.item
+				+e.IMG.image(src="img/002-clock.svg", alt="#")
+				+e.item-title Вам не придётся бегать
+				+e.item-main из&nbsp;одного кабинета в&nbsp;другой, пытаясь сократить время приёма и&nbsp;побыстрее вернуться к&nbsp;своим делам.
+			+e.item
+				+e.IMG.image(src="img/report.svg", alt="#")
+				+e.item-title В течение суток
+				+e.item-main вы&nbsp;получаете необходимые подписи, печати и&nbsp;готовый документ.
+	// end side-order-deliver
+
+
+mixin side-order-deliver-light(t)
+	// start side-order-deliver
+	.order-deliver-light
+		+b.side-order-deliver.side-block#side-order-deliver&attributes(attributes)
+			.side-main
+				+e.title.second-font Оформим сегодня доставим завтра
+				+e.item
+					+e.IMG.image(src="img/syringe.svg", alt="#")
+					+e.item-title Не нужно тратить время
+					+e.item-main на&nbsp;запись к&nbsp;врачам, сдачу анализов и&nbsp;много других неприятных процедур.
+				+e.item
+					+e.IMG.image(src="img/tickets.svg", alt="#")
+					+e.item-title Никаких талончиков
+					+e.item-main номерков, угрюмых взглядов в&nbsp;поликлинике&nbsp;&mdash; наши сотрудники ценят комфорт клиентов!
+				+e.item
+					+e.IMG.image(src="img/002-clock.svg", alt="#")
+					+e.item-title Вам не придётся бегать
+					+e.item-main из&nbsp;одного кабинета в&nbsp;другой, пытаясь сократить время приёма и&nbsp;побыстрее вернуться к&nbsp;своим делам.
+				+e.item
+					+e.IMG.image(src="img/report.svg", alt="#")
+					+e.item-title В течение суток
+					+e.item-main вы&nbsp;получаете необходимые подписи, печати и&nbsp;готовый документ.
+	// end side-order-deliver

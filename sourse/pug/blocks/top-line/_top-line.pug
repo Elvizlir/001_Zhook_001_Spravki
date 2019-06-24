@@ -1,0 +1,46 @@
+mixin top-line()
+	// start .top-line
+	+b.top-line.block-with-lazy
+		.container
+			.row
+				.col.d-none.d-xl-block
+					.work-time Работаем с 9:00 до 22:00
+				.col-12.col-xl-5.social
+					.social_text Мы в соц.сетях:
+					ul.social_list
+						li.social_item
+							a(href="#")
+								img(src="img/svg/social-1.svg", alt="")
+						li.social_item
+							a(href="#")
+								img(src="img/svg/social-2.svg", alt="")
+						li.social_item
+							a(href="#")
+								img(src="img/svg/social-3.svg", alt="")
+						li.social_item
+							a(href="#")
+								img(src="img/svg/social-4.svg", alt="")
+						li.social_item
+							a(href="#")
+								img(src="img/svg/social-5.svg", alt="")
+						li.social_item
+							a(href="#")
+								img(src="img/svg/social-6.svg", alt="")
+				.col.favorite.d-none.d-xl-block
+					a.favorite_item(href="#") Добавить в Избранное
+
+	// end .top-line
+
+mixin bottom-line()
+	// start .bottom-line
+	+b.bottom-line.block-with-lazy
+		.container
+			.row
+				.col
+					+e.A.contract(href="#") Пользовательское соглашение
+				.col-auto.col-sm-4
+					+e.A.map(href="#") Карта сайта
+				.col.d-none.d-lg-block
+					+e.work-time Работаем с 9:00 до 22:00
+
+	// end .bottom-line

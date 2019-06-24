@@ -1,0 +1,137 @@
+mixin s-contact()
+	// start s-contact
+	+b.s-contact.container.block-with-lazy#s-contact&attributes(attributes)
+		+e.title.second-font 
+			span Купить медицинский документ в любом регионе РФ
+		.row
+			+e.col.col-xl-7.col-md-12
+				+e.P.main Для того, что&nbsp;бы купить медицинский документ в&nbsp;Москве, Санкт-Петербурге, Новосибирске необходимо заполнить форму он-лайн заявки у&nbsp;нас на&nbsp;сайте. При этом нужно указать необходимые данные заказчика согласно пунктам формы в&nbsp;полном объеме.
+				
+				+e.P.main Если необходимо изготовить срочный заказ, обязательно указывайте правильные контактные данные для связи с&nbsp;Вами.
+				
+				+e.P.main Обратившись к&nbsp;нам с&nbsp;намерением приобретения документов, Вы&nbsp;гарантированно получаете документы заполненные действующим врачом! Заполнение происходит с&nbsp;учётом требований Министерства здравоохранения РФ. Процесс сотрудничества абсолютно конфиденциален.
+				
+				+e.P.main Доставка в&nbsp;любой населенный пункт России курьерскими службами. Оплата при получении.
+			+e.map.col-xl-auto.col-md-12
+				<script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A292cb3bca8ce18bb87df026d2ebd0ef87c2ee8948c1bc5a256fb055093291014&amp;width=407&amp;height=243&amp;lang=ru_RU&amp;scroll=false"></script>
+
+		+b.phone
+			+e.title.second-font Для уточнения всех деталей звоните по телефону:
+			+e.item
+				+e.city г. Москва:
+				+e.A.number.second-font(href="tel:+7(495)108-75-79") +7 (495) 108-75-79
+				+e.address ул. Справочная 75, корп. 5, оф. 315
+			+e.item
+				+e.city г. Москва:
+				+e.A.number.second-font(href="tel:+7(495)108-75-79") +7 (495) 108-75-79
+				+e.address ул. Справочная 75, корп. 5, оф. 315
+			+e.item
+				+e.city г. Москва:
+				+e.A.number.second-font(href="tel:+7(495)108-75-79") +7 (495) 108-75-79
+				+e.address ул. Справочная 75, корп. 5, оф. 315
+
+		+e.P.main Для оформления заявки с помощью нашего менеджера, пишите на электронную почту: 
+			|
+			+e.A.mail(href="mailto:mail@spravka-1.com") mail@spravka-1.com
+	// end s-contact
+
+
+mixin s-contact-city(c, a)
+	// start s-contact
+	+b.s-contact.container.block-with-lazy#s-contact&attributes(attributes)
+		+e.title.second-font 
+			span Купить медицинский документ в любом регионе РФ
+		.row
+			+e.col.col-xl-7.col-md-12
+				+e.P.main Для того, что&nbsp;бы купить медицинский документ в&nbsp;Москве, Санкт-Петербурге, Новосибирске необходимо заполнить форму он-лайн заявки у&nbsp;нас на&nbsp;сайте. При этом нужно указать необходимые данные заказчика согласно пунктам формы в&nbsp;полном объеме.
+				
+				+e.P.main Если необходимо изготовить срочный заказ, обязательно указывайте правильные контактные данные для связи с&nbsp;Вами.
+				
+				+e.P.main Обратившись к&nbsp;нам с&nbsp;намерением приобретения документов, Вы&nbsp;гарантированно получаете документы заполненные действующим врачом! Заполнение происходит с&nbsp;учётом требований Министерства здравоохранения РФ. Процесс сотрудничества абсолютно конфиденциален.
+				
+				+e.P.main Доставка в&nbsp;любой населенный пункт России курьерскими службами. Оплата при получении.
+			+e.map.col-xl-auto.col-md-12
+				<script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A292cb3bca8ce18bb87df026d2ebd0ef87c2ee8948c1bc5a256fb055093291014&amp;width=407&amp;height=243&amp;lang=ru_RU&amp;scroll=false"></script>
+
+		+b.phone
+			+e.title.second-font Для уточнения всех деталей звоните по телефону:
+			+e.item
+				+e.city=c
+				+e.A.number.second-font(href="tel:+7(495)108-75-79") +7 (495) 108-75-79
+				+e.address=a
+			+e.item-mail
+				+e.city Для оформления заявки с помощью нашего менеджера, пишите на электронную почту:
+				+e.A.number.second-font(href="mailto:mail@spravka-1.com") mail@spravka-1.com
+
+		//- +e.P.main Для оформления заявки с помощью нашего менеджера, пишите на электронную почту: 
+		//- 	|
+		//- 	+e.A.mail(href="mailto:mail@spravka-1.com") mail@spravka-1.com
+	// end s-contact
+
+
+mixin s-contact-order()
+	// start s-contact
+	+b.s-contact.s-contact-order.container.block-with-lazy#s-contact&attributes(attributes)
+		+e.main-block
+			+e.title.second-font 
+				span ОПЛАТА И ДОСТАВКА
+			+e.P.main Обращаясь в&nbsp;нашу компанию, Вы&nbsp;можете забыть о&nbsp;проблемах с&nbsp;оформлением медицинских справок. Компания не&nbsp;требует предоплату. Мы&nbsp;в&nbsp;обязательном порядке предоставляем клиентам возможность предварительно убедиться в&nbsp;том, что медицинская справка не&nbsp;содержит ошибок и&nbsp;неточностей в&nbsp;оформлении. Если Вас все устраивает&nbsp;&mdash; Вы&nbsp;вносите оплату. Если нет&nbsp;&mdash; мы&nbsp;бесплатно исправляем недочеты. Однако такого еще не&nbsp;случалось за&nbsp;время работы в&nbsp;данной сфере.
+			
+			+e.P.main При доставке курьером&nbsp;Вы можете рассчитаться наличными. Если&nbsp;же доставка выполняется почтовой службой, то&nbsp;используется наложенный платеж. Доставка по&nbsp;Москве в&nbsp;пределах МКАД осуществляется бесплатно, за&nbsp;пределы МКАД&nbsp;&mdash; от&nbsp;500&nbsp;руб. Адресная доставка по&nbsp;договоренности.
+			
+			+e.P.main Обратившись к&nbsp;нам с&nbsp;намерением приобретения документов, Вы&nbsp;гарантированно получаете документы заполненные действующим врачом! Заполнение происходит с&nbsp;учётом требований Министерства здравоохранения РФ. Процесс сотрудничества абсолютно конфиденциален.
+			
+			+e.P.main Оплата выполняется только после проверки. Вы&nbsp;либо проверяете документ на&nbsp;месте, при встрече с&nbsp;представителем компании, либо получаете предварительно макет на&nbsp;утверждение.
+
+		+b.phone
+			+e.title.second-font Для уточнения всех деталей звоните по телефону:
+			+e.item
+				+e.city г. Москва:
+				+e.A.number.second-font(href="tel:+7(495)108-75-79") +7 (495) 108-75-79
+				+e.address ул. Справочная 75, корп. 5, оф. 315
+			+e.item
+				+e.city г. Москва:
+				+e.A.number.second-font(href="tel:+7(495)108-75-79") +7 (495) 108-75-79
+				+e.address ул. Справочная 75, корп. 5, оф. 315
+			+e.item
+				+e.city г. Москва:
+				+e.A.number.second-font(href="tel:+7(495)108-75-79") +7 (495) 108-75-79
+				+e.address ул. Справочная 75, корп. 5, оф. 315
+
+		+e.P.main Для оформления заявки с помощью нашего менеджера, пишите на электронную почту: 
+			|
+			+e.A.mail(href="mailto:mail@spravka-1.com") mail@spravka-1.com
+	// end s-contact
+
+
+mixin s-contact-city(c, a)
+	// start s-contact
+	+b.s-contact.container.block-with-lazy#s-contact&attributes(attributes)
+		+e.title.second-font 
+			span Купить медицинский документ в любом регионе РФ
+		.row
+			+e.col.col-xl-7.col-md-12
+				+e.P.main Для того, что&nbsp;бы купить медицинский документ в&nbsp;Москве, Санкт-Петербурге, Новосибирске необходимо заполнить форму он-лайн заявки у&nbsp;нас на&nbsp;сайте. При этом нужно указать необходимые данные заказчика согласно пунктам формы в&nbsp;полном объеме.
+				
+				+e.P.main Если необходимо изготовить срочный заказ, обязательно указывайте правильные контактные данные для связи с&nbsp;Вами.
+				
+				+e.P.main Обратившись к&nbsp;нам с&nbsp;намерением приобретения документов, Вы&nbsp;гарантированно получаете документы заполненные действующим врачом! Заполнение происходит с&nbsp;учётом требований Министерства здравоохранения РФ. Процесс сотрудничества абсолютно конфиденциален.
+				
+				+e.P.main Доставка в&nbsp;любой населенный пункт России курьерскими службами. Оплата при получении.
+			+e.map.col-xl-auto.col-md-12
+				<script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A292cb3bca8ce18bb87df026d2ebd0ef87c2ee8948c1bc5a256fb055093291014&amp;width=407&amp;height=243&amp;lang=ru_RU&amp;scroll=false"></script>
+
+		+b.phone
+			+e.title.second-font Для уточнения всех деталей звоните по телефону:
+			+e.item
+				+e.city=c
+				+e.A.number.second-font(href="tel:+7(495)108-75-79") +7 (495) 108-75-79
+				+e.address=a
+			+e.item-mail
+				+e.city Для оформления заявки с помощью нашего менеджера, пишите на электронную почту:
+				+e.A.number.second-font(href="mailto:mail@spravka-1.com") mail@spravka-1.com
+
+		//- +e.P.main Для оформления заявки с помощью нашего менеджера, пишите на электронную почту: 
+		//- 	|
+		//- 	+e.A.mail(href="mailto:mail@spravka-1.com") mail@spravka-1.com
+	// end s-contact

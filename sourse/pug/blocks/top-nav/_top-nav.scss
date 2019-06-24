@@ -1,0 +1,270 @@
+.top-nav {
+	
+	
+	// padding-top: rem(15);
+	// position: absolute;
+	top: 100%;
+	// @include clearfix;ss
+	z-index: 20;
+	// padding-top: rem(3);
+	@include mt;
+	top: 0;
+	left: 0;
+	width: 100%;
+	
+	&__container{
+		background-color: #fff;
+	}
+	
+	&__logo{
+		display: flex;
+		margin-left: rem(5);
+		a{
+			padding: 0 rem(10);
+			align-items: center;
+			justify-content: center;
+			background-color: $primary;
+			display: flex;
+			width: 100%;
+			height: auto;
+			@include media-breakpoint-down(xs) {
+				padding-top: rem(3);
+				padding-bottom: rem(3);
+			}
+			@include media-breakpoint-up(sm) {
+				max-width: rem(200);
+			}
+		}
+		img{
+			flex-shrink: 0;
+			max-width: 100%;
+		}
+	}
+	
+	// &.fixed {
+		// 	width: 100vw;
+		// 	bottom: auto;
+		// 	margin-top: 0;
+		// 	background-color: #fff;
+		// }
+		
+		&__nav {
+			text-align: center;
+			list-style-type: none;
+		}
+		
+		&__item {
+			display: inline-block;
+			list-style-type: none;
+		}
+		
+		.phone{
+			list-style: none;
+			margin: 0;
+			padding: rem(15) rem(15) rem(15) 0;
+			line-height: rem(23);
+			font-size: rem(15);
+			color: #0071BC;
+			li{
+				text-align: right;
+			}
+			a{
+				color: $body-color;
+				font-weight: 700;
+				margin-left: rem(5);
+			}
+		}
+		@include media-breakpoint-down(lg) {
+			.phone{
+				padding: rem(8) rem(8) rem(8) 0;
+			}
+		}
+		
+		// 
+		@include media-breakpoint-up(xl) {}
+		
+		@include media-breakpoint-up(lg) {}
+		
+		@include media-breakpoint-up(md) {}
+		
+		@include media-breakpoint-up(sm) {}
+		
+		@include media-breakpoint-up(xs) {}
+		
+		// 
+		@include media-breakpoint-between(md, xl) {}
+		
+		// 
+		@include media-breakpoint-only(xs) {}
+		
+	@include media-breakpoint-only(sm) {}
+
+	@include media-breakpoint-only(md) {}
+
+	@include media-breakpoint-only(lg) {}
+
+	@include media-breakpoint-only(xl) {}
+
+	// 
+	@include media-breakpoint-down(xl) {}
+
+	@include media-breakpoint-down(lg) {}
+
+	@include media-breakpoint-down(md) {}
+
+	@include media-breakpoint-down(sm) {}
+
+	@include media-breakpoint-down(xs) {}
+}
+
+// мобильное меню
+
+// мобильное меню
+$h: em(2);
+
+.toggle-menu-mobile {
+	display: block;
+	height: $h* 14;
+	margin-top: 0;
+	margin-left: 0;
+	position: relative;
+	z-index: 999 !important;
+	right: 0;
+	padding: 3px;
+	border-radius: 5px;
+	top: $h;
+
+
+	span:after,
+	span:before {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: $h*2;
+	}
+
+	span:after {
+		top: $h * 4;
+	}
+
+	span {
+		position: relative;
+		display: block;
+	}
+
+	span,
+	span:after,
+	span:before {
+		// width: 32px;
+		font-size: 32px;
+		width: 1em;
+		height: $h;
+		background-color: $primary;
+		transition: all 0.3s;
+		backface-visibility: hidden;
+		border-radius: 6px;
+	}
+
+	&.on {
+		opacity: 0;
+	}
+
+	&.on span {
+		background-color: transparent;
+	}
+
+	&.on span:before {
+		transform: rotate(45deg) translate(em(-1), 0px);
+	}
+
+	&.on span:after {
+		transform: rotate(-45deg) translate(em(3), em(-4));
+	}
+}
+
+.menu-mobile {
+	position: fixed !important;
+	z-index: 999;
+	max-width: 85%;
+	height: 101vh;
+	width: 280px;
+	top: 0;
+	// left: 0;
+	right: 0;
+	transform: translate(100%, 0);
+	@include mt(.6);
+	will-change: transform;
+
+	&__inner {
+		background-color: white;
+		padding: 5% 0;
+		overflow-y: auto;
+		-webkit-overflow-scrolling: touch;
+		height: 100%;
+	}
+
+	&.active {
+		transform: translate(0, 0);
+
+		.toggle-menu-mobile {
+			opacity: 1;
+		}
+	}
+
+	.toggle-menu-mobile {
+		// position: relative;
+		cursor: pointer;
+		margin-left: -15%;
+		position: absolute;
+		opacity: 0;
+		left: 0;
+		right: auto;
+		color: #FFF;
+		top: 10px;
+		z-index: 9999;
+		background-color: transparent;
+
+		span,
+		span:after,
+		span:before {
+			background-color: #FFF;
+		}
+
+		&.on {
+			opacity: 1;
+
+			span {
+				background-color: transparent;
+			}
+		}
+	}
+
+	ul {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+	}
+
+	li {
+		display: block;
+		margin: 0;
+		border-top: 1px solid rgba(114, 113, 113, 0.13);
+
+		a {
+			// font-size: 16px;
+
+			padding: rem(10);
+			display: block;
+			
+		}
+	}
+	.top-line{
+		margin-top: rem(30);
+		.favorite{
+			margin-top: rem(20);
+			text-align: left;
+			margin-left: rem(40);
+		}
+	}
+}
+	

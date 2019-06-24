@@ -1,0 +1,45 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-work/_s-work.pug
+include ../blocks/side-blocks/_side-blocks.pug
+
+block title
+	title Прайс-лист
+
+block pagecontent
+	.main-wrapper(style="background-image: url(../img/header-bg-2.jpg)")
+		//- +mob-mnu()
+
+		+header()
+			+top-line()
+			+top-nav()
+			+header-block-2("Прайс-лист на наши документы","img/docs.png")
+
+		.container.main
+			+breadcrumb("Главная","Прайс-лист")
+			.row
+				.col-xl.middle-col
+					+price-accordion()
+					+b.price-btn
+						+e.btn(href="#")
+							img.btn_image(src="img/add.svg", alt="#") 
+							|Заказать документ
+
+				.col-xl-auto.order-xl-first.col-md-6
+					+side-nav()
+					+side-reviews("Последние отзывы")
+					+side-order-deliver-light
+				.col-xl-auto.col-md-6
+					+side-order("Заказать медсправку")
+					+side-search.d-none.d-xl-block()
+					+side-stats()
+					+side-order-call("Обратный звонок")
+					+side-share()
+					
+					
+		+footer()
+		+bottom-line()
+

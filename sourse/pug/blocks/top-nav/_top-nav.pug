@@ -1,0 +1,61 @@
+
+mixin mob-mnu()
+	+b.toggle-menu-mobile--js.d-xl-none
+		span
+	+b.menu-mobile--js.d-xl-none
+		+b.toggle-menu-mobile--js
+			span
+		+e.inner
+		
+			+mnu()
+			+b.top-line.block-with-lazy 
+				.work-time Работаем с 9:00 до 22:00
+				//- .social
+					//- .social_text Мы в соц.сетях:
+					//- ul.social_list
+					//- 	li.social_item
+					//- 		a(href="#")
+					//- 			img(src="img/svg/social-1.svg", alt="")
+					//- 	li.social_item
+					//- 		a(href="#")
+					//- 			img(src="img/svg/social-2.svg", alt="")
+					//- 	li.social_item
+					//- 		a(href="#")
+					//- 			img(src="img/svg/social-3.svg", alt="")
+					//- 	li.social_item
+					//- 		a(href="#")
+					//- 			img(src="img/svg/social-4.svg", alt="")
+					//- 	li.social_item
+					//- 		a(href="#")
+					//- 			img(src="img/svg/social-5.svg", alt="")
+					//- 	li.social_item
+					//- 		a(href="#")
+					//- 			img(src="img/svg/social-6.svg", alt="")
+				.favorite
+					a.favorite_item(href="#") Добавить в Избранное
+
+	//  мобильное меню
+mixin top-nav() 
+	// start top-nav
+	+b.top-nav.block-with-lazy
+		+e.container.container
+			.row.justify-content-between
+				+e.logo.col-xl-auto.col
+					a(href="#")
+						img(src="img/header_logo.png", alt="#")
+				.col.d-none.d-xl-block.align-self-center
+					+mnu()
+				+e.col-auto.d-none.d-sm-block
+					ul.phone
+						li
+							span г. Москва:
+							a(href="tel:+7(495)108-75-79") +7 (495) 108-75-79
+						li
+							span г. Санкт-Петербург:
+							a(href="tel:+7(495)108-75-79") +7 (495) 108-75-79
+						li
+							span г. Новосибирск:
+							a(href="tel:+7(495)108-75-79") +7 (495) 108-75-79
+				.col-auto.d-flex.align-items-center
+					+mob-mnu()
+	// end top-nav

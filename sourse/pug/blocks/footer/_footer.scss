@@ -1,0 +1,156 @@
+.footer {
+  font-size: rem(14);
+  line-height: rem(21);
+	&__container{
+    padding: rem(40) rem(40);
+    background-color: #F5F5F5;
+  }
+  &__col{
+    text-align: center;
+    @include media-breakpoint-up(sm) {
+      text-align: left;
+    }
+  }
+  &__logo{
+    min-width: rem(157);
+    height: auto;
+    margin-bottom: rem(10);
+  }
+  &__text{
+    margin: 0 auto;
+    max-width: rem(326);
+    @include media-breakpoint-up(sm) {
+      margin: 0;
+      max-width: rem(190);
+    }
+  }
+  &__counter{
+    display: inline-block;
+    margin-top: rem(15);
+    margin-right: rem(15);
+  }
+  &__nav{
+    list-style: none;
+    align-self: center;
+    width: 100%;
+  }
+  &__nav-item{
+    position: relative;
+    margin-top: rem(10);
+    border: 2px solid transparent;
+    transition: border .2s ease;
+    a{
+      text-decoration: none;
+      color: #000;
+    }
+    &::before {
+      content: '•';
+      position: absolute;
+      display: block;
+      font-size: rem(24);
+      color: #f7931e;
+      left: rem(-15)
+    }
+    &:hover{
+      border-bottom: rem(2) solid #f7931e
+    }
+  }
+  &__search{
+    background-color: #F5F5F5;
+    margin-top: rem(20);
+    width: rem(195);
+    height: rem(40);
+    border: rem(1) solid $primary;
+    padding: rem(10);
+    border-radius: rem(2);
+    margin-right: rem(15);
+    margin-bottom: rem(20);
+  }
+  &__submit{
+    @extend .btn;
+    @extend .btn-warning;
+    padding: rem(6) rem(6);
+    margin-top: rem(-3);
+    }
+  &__mail{
+    font-weight: 700;
+    font-size: rem(24);
+    line-height: rem(36);
+    color: #000;
+  }
+  &__phone-title{
+    margin-bottom: rem(20);
+  }
+  &__number{
+    font-weight: 700;
+    font-size: rem(24);
+    line-height: rem(36);
+    margin: 0;
+    color: #000;
+  }
+
+
+// 
+@include media-breakpoint-up(xl) {}
+
+@include media-breakpoint-up(lg) {}
+
+@include media-breakpoint-up(md) {}
+
+@include media-breakpoint-up(sm) {}
+
+@include media-breakpoint-up(xs) {}
+
+
+// 
+@include media-breakpoint-between(md, xl) {}
+
+
+// 
+@include media-breakpoint-only(xs) {}
+
+@include media-breakpoint-only(sm) {}
+
+@include media-breakpoint-only(md) {}
+
+@include media-breakpoint-only(lg) {}
+
+@include media-breakpoint-only(xl) {}
+
+
+// 
+@include media-breakpoint-down(xl) {}
+
+@include media-breakpoint-down(lg) {}
+
+@include media-breakpoint-down(md) {}
+
+@include media-breakpoint-down(sm) {}
+
+@include media-breakpoint-down(xs) {}
+}
+.lazy-bg,
+img.lazy{
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+  transition: filter 400ms, -webkit-filter 400ms;
+  
+}
+.lazyloaded{
+  filter: blur(0);
+}
+.social-list{
+  margin-top: rem(15);
+  display: flex;
+  &__social-image{
+    opacity: 0.7;
+    width: rem(26);
+    height: rem(26);
+    display: block;
+    margin-right: rem(17);
+    transition: opacity .2s ease;
+    &:hover{
+      opacity: 1;
+    }
+  }
+}

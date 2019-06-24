@@ -1,0 +1,55 @@
+mixin footer()
+	+b.FOOTER.footer.block-with-lazy
+		+e.container.container
+			.row
+				+e.col.col.col-xl-3.col-lg-4.col-md-6
+					a(href="#")
+						+e.IMG.logo(src="img/footer_logo.png", alt="#")
+					+e.P.text Все медицинские справки и&nbsp;анализы официально, без посещения врачей, за&nbsp;1&nbsp;день
+					+e.IMG.counter(src="img/counter1.jpg", alt="#")
+					+e.IMG.counter(src="img/counter2.jpg", alt="#")
+					+e.IMG.counter(src="img/counter3.jpg", alt="#")
+				+e.col.col-3.d-none.d-xl-block
+					+e.UL.nav
+						+e.LI.nav-item
+							a(href="#") Главная
+						+e.LI.nav-item
+							a(href="#") Купить справку
+						+e.LI.nav-item
+							a(href="#") Прайс-лист
+						+e.LI.nav-item
+							a(href="#") О наших справках
+						+e.LI.nav-item
+							a(href="#") Оплата и доставка
+						+e.LI.nav-item
+							a(href="#") Отзывы
+						+e.LI.nav-item
+							a(href="#") Контакты
+				+e.col.col-xl-3.col-md-4.d-none.d-lg-block
+					+e.P.text Мы в соц.сетях:
+					+b.social-list
+						a(href="#")
+							+e.IMG.social-image(src="img/svg/social-1.svg", alt="#")
+						a(href="#")
+							+e.IMG.social-image(src="img/svg/social-2.svg", alt="#")
+						a(href="#")
+							+e.IMG.social-image(src="img/svg/social-3.svg", alt="#")
+						a(href="#")
+							+e.IMG.social-image(src="img/svg/social-4.svg", alt="#")
+						a(href="#")
+							+e.IMG.social-image(src="img/svg/social-5.svg", alt="#")
+						a(href="#")
+							+e.IMG.social-image(src="img/svg/social-6.svg", alt="#")
+					+e.INPUT.search(type="search" name="q" placeholder="Поиск по сайту")
+					+e.INPUT.submit(type="image" src="img/search.png" alt="#")
+					+e.P.text Пишите нам:
+					+e.A.mail.second-font(href="mailto:mail@spravka-1.com")  mail@spravka-1.com
+				+e.col.col-6.col-xl-3.col-lg-4.col-md-6.d-none.d-sm-block
+					+e.P.phone-title Телефоны:
+					+e.P.text г. Москва:
+					+e.A.number.second-font(href="tel:+7(495)108-75-79") +7 (495) 108-75-79
+					+e.P.text г. Санкт-Петербург:
+					+e.A.number.second-font(href="tel:+7(495)108-75-79") +7 (495) 108-75-79
+					+e.P.text г. Новосибирск:
+					+e.A.number.second-font(href="tel:+7(495)108-75-79") +7 (495) 108-75-79
+

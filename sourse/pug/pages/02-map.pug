@@ -1,0 +1,167 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-work/_s-work.pug
+include ../blocks/side-blocks/_side-blocks.pug
+
+block title
+	title Карта сайта
+
+block pagecontent
+	.main-wrapper(style="background-image: url(../img/header-bg-2.jpg)")
+		//- +mob-mnu()
+
+		+header()
+			+top-line()
+			+top-nav()
+			+header-block-2("Карта сайта","img/header-block-img1.png")
+
+		.container.main
+			+breadcrumb("Главная","Карта сайта")
+			.row
+				.col-xl.middle-col
+					+b.map-nav
+						.h2.second-font Осовные страницы сайта
+						+e.row.row
+							+e.left-col.col
+								+e.UL.list
+									+e.LI.item 
+										a(href="#") Главная страница
+									+e.LI.item 
+										a(href="#") Прайс-лист
+									+e.LI.item 
+										a(href="#") Новости и статьи
+									+e.LI.item 
+										a(href="#") Страница статьи
+									+e.LI.item 
+										a(href="#") О наших справках
+									+e.LI.item 
+										a(href="#") Справка 095
+									+e.LI.item 
+										a(href="#") Справка в Москве
+									+e.LI.item 
+										a(href="#") Справка в питере
+							.col
+								+e.UL.list
+									+e.LI.item 
+										a(href="#") Справка в Новосибирске
+									+e.LI.item 
+										a(href="#") Заказать сравку
+									+e.LI.item 
+										a(href="#") Заказать справку копия
+									+e.LI.item 
+										a(href="#") Оплата и доставка
+									+e.LI.item 
+										a(href="#") Вопрс-Ответ
+									+e.LI.item 
+										a(href="#") Отзывы
+									+e.LI.item 
+										a(href="#") Контакты
+									+e.LI.item 
+										a(href="#") Спасибо
+									+e.LI.item 
+										a(href="#") Карта сайта
+						
+
+						.h2.second-font Страницы по городам
+						+e.row.row
+							+e.left-col.col
+								+e.UL.list
+									+e.LI.item 
+										a(href="#") Москва
+									+e.LI.item 
+										a(href="#") Новосибирск
+							.col
+								+e.UL.list
+									+e.LI.item 
+										a(href="#") Санкт-Петербург
+
+
+						.h2.second-font Статьи сайта
+						+e.row.row
+							+e.left-col.col
+								+e.UL.list
+									+e.LI.item 
+										a(href="#") Роль медицинских справок в современном мире
+									+e.LI.item 
+										a(href="#") Роль медицинских справок в современном мире
+									+e.LI.item 
+										a(href="#") Роль медицинских справок в современном мире
+							.col
+								+e.UL.list
+									+e.LI.item 
+										a(href="#") Роль медицинских справок в современном мире
+									+e.LI.item 
+										a(href="#") Роль медицинских справок в современном мире
+									+e.LI.item 
+										a(href="#") Роль медицинских справок в современном мире
+
+						
+						.h2.second-font Медицинские справки
+						+e.row.row
+							+e.left-col.col
+								+e.UL.list
+									+e.LI.item 
+										a(href="#") Медицинская справка 095/у
+									+e.LI.item 
+										a(href="#") Медицинская справка 095/у
+									+e.LI.item 
+										a(href="#") Медицинская справка 095/у
+									+e.LI.item 
+										a(href="#") Медицинская справка 095/у
+							.col
+								+e.UL.list
+									+e.LI.item 
+										a(href="#") Медицинская справка 095/у
+									+e.LI.item 
+										a(href="#") Медицинская справка 095/у
+									+e.LI.item 
+										a(href="#") Медицинская справка 095/у
+									+e.LI.item 
+										a(href="#") Медицинская справка 095/у
+						
+						
+						.h2.second-font Результаты анализов, заключения и выписки
+						+e.row.row
+							+e.left-col.col
+								+e.UL.list
+									+e.LI.item 
+										a(href="#") Медицинская справка 095/у
+									+e.LI.item 
+										a(href="#") Медицинская справка 095/у
+							.col
+								+e.UL.list
+									+e.LI.item 
+										a(href="#") Медицинская справка 095/у
+									+e.LI.item 
+										a(href="#") Медицинская справка 095/у
+					+b.map-section.section
+						.row
+							+e.col.col-xl-5.col-6.d-none.d-md-block
+								+e.IMG.section-doctor(src="img/section-doctor.png", alt="#")
+							+e.col.col-xl-6.col-md-6.col
+								+e.main
+									+e.title.second-font Заказать справку
+									+e.main-text мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время для подтверждения заказа. Вы&nbsp;получите документ в&nbsp;течение суток!
+									+e.btn(href="#")
+										img.btn_image(src="img/add.svg", alt="#") 
+										|Заказать документ
+
+				.col-xl-auto.order-xl-first.col-md-6
+					+side-nav()
+					+side-video("Видео о нашей компании")
+					+side-from-to("От заявки до заказа")
+					+side-ask-2("Вопрос-ответ")
+				.col-xl-auto.col-md-6
+					+side-order("Заказать медсправку")
+					+side-search.d-none.d-xl-block()
+					+side-price("Прайс-лист справок")
+					+side-stats()
+					+side-order-deliver
+					
+					
+		+footer()
+		+bottom-line()
+

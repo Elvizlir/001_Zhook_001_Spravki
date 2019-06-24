@@ -1,0 +1,146 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-work/_s-work.pug
+include ../blocks/side-blocks/_side-blocks.pug
+
+block title
+	title Справка 095
+
+block pagecontent
+	.main-wrapper(style="background-image: url(../img/header-bg-2.jpg)")
+		//- +mob-mnu()
+
+		+header()
+			+top-line()
+			+top-nav()
+			+header-block-2("Справка о временной нетрудоспособности учащегося","img/docs.png","(форма 095/у)")
+
+		.container.main
+			+breadcrumb("Главная","О наших справках","Справка формы 095 у")
+			.row
+				.col-xl.middle-col
+					.h2.second-font.page-title Спарвка форма 095/у
+					.doc-side-photo.gal
+						a(href="img/095.jpg") 
+							img.doc-mini(src="img/doc095.jpg", alt="#")
+					+b.doc-description
+						+e.item
+							+e.title.second-font НАИМЕНОВАНИЕ:
+							+e.P.text.article-text Справка о временной нетрудоспособности учащегося
+						+e.item
+							+e.title.second-font СТОИМОСТЬ:
+							+e.subtext.second-font 2000 РУБ.
+						+e.item.deliver
+							+e.title.second-font ДОСТАВКА ПО ГОРОДУ:
+							+e.subtext.second-font БЕСПЛАТНО
+							+e.P.text.article-text Для Москвы за пределы МКАД от 500р.
+					+b.tabs
+						+e.caption.second-font
+							+e.btn.h3.active Назначение
+							+e.btn.h3 Когда пригодиться
+							+e.btn.h3 Видео-обзор
+						+e.wrap
+							+e.content.article-text.active Дается ученикам учебных заведений среднего и&nbsp;высшего звена. Ученика справка 095 полностью освобождает от&nbsp;занятий физкультурой, студентов ВУЗов&nbsp;&mdash; от&nbsp;сдачи текущих спортивных нормативов.
+							+e.content.article-text Иногда в&nbsp;нашей судьбе встречаются непредвиденные проблемы&nbsp;&mdash; требуется срочно выехать по&nbsp;делам, посидеть дома или оказать помощь близким. Не&nbsp;каждый классный руководитель может закрыть на&nbsp;это глаза. Даже если удается договориться с&nbsp;учителем, у&nbsp;него все равно есть руководители повыше, настроенные не&nbsp;так лояльно. Документально подтвердить, что школьник или студент правомерно отсутствует на&nbsp;месте в&nbsp;учебное время&nbsp;&mdash; это обеспечит охрану в&nbsp;правовом плане самого учащегося. Ему не&nbsp;придется ссориться или что-то доказывать неуступчивым преподавателям. Оформляя справку о&nbsp;своей нетрудоспособности, вы&nbsp;легко и&nbsp;просто решаете множество проблем.
+							+e.content.article-text
+								.video-wrap
+									iframe(src='https://www.youtube.com/embed/zlv-BFbFOUs')
+					+main-order-section()
+					+b.section-list.section
+							+e.IMG.logo.logo(src="img/logo.png", alt="#")
+							+e.title.title.second-font СПРАВКА 095/У В МОСКВЕ, <br>САНКТ-ПЕТЕРБУРГЕ И НОВОСИБИРСКЕ 
+							+e.OL.list
+								+e.LI.item Роль Медицинских справок в современном мире.
+								+e.LI.item Как получить мед. справку без посещения врачей?
+								+e.LI.item Купить медицинскую справку на нашем сайте.
+								+e.LI.item Доставка Медицинских справок на дом.
+								+e.LI.item Гарантия легальности медицинских справок.
+								+e.LI.item Скидки для постоянных клиентов.
+					+news-block-main()
+					+news-block-main()
+					+b.docs-offer
+						+e.main-block
+							+e.title.h2.second-font ПРЕДЛАГАЕМ НА САМЫХ ВЫГОДНЫХ УСЛОВИЯХ 
+							+e.subtitle.h2.second-font КУПИТЬ МЕДСПРАВКУ БЕЗ ПРОХОЖДЕНИЯ ВРАЧЕЙ
+							+e.P.main-text Все наши преимущества нацелены исключительно на&nbsp;наших клиентов, чтобы&nbsp;Вы за&nbsp;умеренную плату и&nbsp;без потери своего личного времени своевременно получили необходимую Вам справку.
+					+news-block-main()
+					.h2.second-font.page-title ОТЗЫВЫ О СПРАВКЕ 095/У
+					+b.docs-reviews
+						+e.item
+							+e.date 21.03.2018г.
+							+e.title.h3.second-font ЕЛЕНА, МОСКВА
+							+e.subtitle.h5 Детская справка после болезни ребенка
+							+e.P.main-text.article-text У&nbsp;нас все работают, поэтому тащить ребенка в&nbsp;поликлинику для оформления медкарты поручили бабушке. Просиживать в&nbsp;таких очередях с&nbsp;внуком&nbsp;&mdash; дело хлопотное и&nbsp;опасное для его здоровья, поэтому сын предложил заказать справку в&nbsp;интернете. У&nbsp;моего поколения отношение к&nbsp;подобным услугам скептическое, но&nbsp;эту клинику ему порекомендовал коллега&nbsp;&mdash; решили попробовать.
+							+e.P.main-text.article-text Все вопросы папа решил по&nbsp;телефону, оплатили услугу в&nbsp;тот&nbsp;же день, после бесплатной доставки документа. Для меня это проще, чем искать способы отблагодарить педиатра в&nbsp;поликлинике. Сомневалась в&nbsp;подлинности справки до&nbsp;последнего, но&nbsp;когда и&nbsp;ее, и&nbsp;ребенка без лишних слов приняли в&nbsp;садике&nbsp;&mdash; сомнения развеялись. Благодарю специалистов за&nbsp;профессионализм, через год и&nbsp;для внучки у&nbsp;вас оформлять карту будем!
+						+e.item
+							+e.date 21.03.2018г.
+							+e.title.h3.second-font ЕЛЕНА, МОСКВА
+							+e.subtitle.h5 Детская справка после болезни ребенка
+							+e.P.main-text.article-text У&nbsp;нас все работают, поэтому тащить ребенка в&nbsp;поликлинику для оформления медкарты поручили бабушке. Просиживать в&nbsp;таких очередях с&nbsp;внуком&nbsp;&mdash; дело хлопотное и&nbsp;опасное для его здоровья, поэтому сын предложил заказать справку в&nbsp;интернете. У&nbsp;моего поколения отношение к&nbsp;подобным услугам скептическое, но&nbsp;эту клинику ему порекомендовал коллега&nbsp;&mdash; решили попробовать.
+						+e.item
+							+e.date 21.03.2018г.
+							+e.title.h3.second-font ЕЛЕНА, МОСКВА
+							+e.subtitle.h5 Детская справка после болезни ребенка
+							+e.P.main-text.article-text У&nbsp;нас все работают, поэтому тащить ребенка в&nbsp;поликлинику для оформления медкарты поручили бабушке.
+					+pugin()
+					+b.leave-feedback
+						+e.title.h2.second-font ОСТАВЬТЕ СВОЙ ОТЗЫВ О СПРАВКЕ
+						+e.item
+							+e.input-title.article-text Ваше имя:
+							+form-wrap
+								+input("","Введите имя")
+						+e.item
+							+e.input-title.article-text Выберите город:
+							+form-wrap
+								+e.input-wrap.form-group
+									+e.SELECT.input.form-control
+										option.d-none(disabled selected) Укажите, с какого вы города
+										option 1
+										option 1
+										option 1
+						+e.item
+							+e.input-title.article-text Ваша почта:
+							+form-wrap
+								+input("","Введите адрес Вашей почты")
+						+e.item
+							+e.input-title.article-text Контактный телефон для связи:
+							+form-wrap
+								+input("","Введите номер телефона")
+						+e.item
+							+e.input-title.article-text Ваш отзыв
+							+form-wrap
+								+ta("Введите текст отзыва)")
+						.price-btn
+							+e.A.docs-btn(href="#")
+								img.btn_image(src="img/document.svg", alt="#") 
+								|Оставить отзыв
+
+
+
+
+					
+					
+				.col-xl-auto.order-xl-first.col-md-6
+					+side-nav()
+					+side-video("Видео о нашей компании")
+					+side-reviews("Последние отзывы")
+					+side-news("Новости и статьи")
+					+side-ask("Вопрос-ответ")
+					//- +side-order-call("Обратный звонок")
+				.col-xl-auto.col-md-6
+					//- +side-order("Заказать медсправку")
+					+side-search.d-none.d-xl-block()
+					+side-stats()
+					+side-order-deliver()
+					+side-from-to("От заявки до заказа")
+					+side-price("Прайс-лист справок")
+					+side-share()
+					//- +side-news("Новости и статьи")
+					//- +side-order-call("Обратный звонок")
+					
+		+footer()
+		+bottom-line()
+

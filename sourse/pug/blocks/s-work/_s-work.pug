@@ -1,0 +1,103 @@
+mixin s-work()
+	// start s-work
+	+b.s-work#s-work&attributes(attributes)
+		.container
+			+e.main.row
+				+e.col-btn.col-auto.d-none.d-xl-block
+					+e.IMG.left-bg(src="img/work-doctor.png", alt="#")
+					+e.btn(href="#")
+						img.btn_image(src="img/add.svg", alt="#") 
+						|Заказать документ
+				.col
+					+e.title.second-font Как мы работаем от заявки до заказа
+					+b.work-items
+						.row
+							+e.col.col-md-3.col-sm-12
+								+e.IMG.image(src="img/work-1.svg", alt="#")
+								+e.title.second-font Обращение
+								+e.P.main Заполняете заявку на&nbsp;сайте или звоните по&nbsp;телефону:
+								+e.P.main г. Москва:
+								+e.A.phone.second-font(href="tel:+7(495)108-75-79") +7 (495) 108-75-79
+								+e.P.main г. Санкт-Петербург:
+								+e.A.phone.second-font(href="tel:+7(495)108-75-79") +7 (495) 108-75-79
+								+e.P.main г. Новосибирск:
+								div
+									+e.A.phone.second-font(href="tel:+7(495)108-75-79") +7 (495) 108-75-79
+								+e.IMG.arrow(src="img/right-arrow.svg", alt="#")
+							
+							+e.col.col-md-3.col-sm-12
+								+e.IMG.image(src="img/work-2.svg", alt="#")
+								+e.title.second-font Консультация
+								+e.P.main Ожидайте звонка оператора. Мы&nbsp;уточним все необходимые детали и&nbsp;сразу приступим к&nbsp;оформлению документа.
+								+e.IMG.arrow(src="img/right-arrow.svg", alt="#")
+							
+							+e.col.col-md-3.col-sm-12
+								+e.IMG.image(src="img/work-3.svg", alt="#")
+								+e.title.second-font Оформление
+								+e.P.main Врач грамотно заполняет и&nbsp;выдаёт официально заполненный мед. документ на&nbsp;законных основаниях.
+								+e.P.main В&nbsp;государственных учреждениях получение справки затянется на&nbsp;неопределенное время, наши специалисты все сделают в&nbsp;течение суток.
+								+e.IMG.arrow(src="img/right-arrow.svg", alt="#")
+							
+							+e.col.col-md-3.col-sm-12
+								+e.IMG.image(src="img/work-4.svg", alt="#")
+								+e.title.second-font Доставка
+								+e.P.main Бесплатная доставка Вашего документа курьерской службой и&nbsp;Вы оплачиваете нашу работу.
+								+e.P.main Курьерская служба доставляет справки только по&nbsp;рабочим дням!
+								+e.P.main Для Москвы доставка за&nbsp;МКАД возможна с&nbsp;доплатой от&nbsp;500 до&nbsp;1000&nbsp;рублей!
+					+e.col-12.d-xl-none
+						+e.btn(href="#")
+							img.btn_image(src="img/add.svg", alt="#") 
+							|Заказать документ
+								
+
+	// end s-work
+
+
+mixin s-work-city()
+	// start s-work
+	+b.s-work#s-work&attributes(attributes)
+		.container
+			+e.main.row
+				+e.col-btn.col-auto.d-none.d-xl-block
+					+e.IMG.left-bg(src="img/work-doctor.png", alt="#")
+					+e.btn.btn-city(href="#")
+						img.btn_image(src="img/add.svg", alt="#") 
+						|Заказать документ
+				.col
+					+e.title.second-font Как мы работаем от заявки до заказа
+					+b.work-items
+						.row
+							+e.col.col-md-3.col-sm-12
+								+e.IMG.image(src="img/work-1.svg", alt="#")
+								+e.title.second-font Обращение
+								+e.P.main Заполняете заявку на&nbsp;сайте или звоните по&nbsp;телефону:
+								
+								+e.A.phone.second-font(href="tel:+7(495)108-75-79") +7 (495) 108-75-79
+								+e.IMG.arrow(src="img/right-arrow.svg", alt="#")
+							
+							+e.col.col-md-3.col-sm-12
+								+e.IMG.image(src="img/work-2.svg", alt="#")
+								+e.title.second-font Консультация
+								+e.P.main Ожидайте звонка оператора. Мы&nbsp;уточним все необходимые детали и&nbsp;сразу приступим к&nbsp;оформлению документа.
+								+e.IMG.arrow(src="img/right-arrow.svg", alt="#")
+							
+							+e.col.col-md-3.col-sm-12
+								+e.IMG.image(src="img/work-3.svg", alt="#")
+								+e.title.second-font Оформление
+								+e.P.main Врач грамотно заполняет и&nbsp;выдаёт официально заполненный мед. документ на&nbsp;законных основаниях.
+								+e.P.main В&nbsp;государственных учреждениях получение справки затянется на&nbsp;неопределенное время, наши специалисты все сделают в&nbsp;течение суток.
+								+e.IMG.arrow(src="img/right-arrow.svg", alt="#")
+							
+							+e.col.col-md-3.col-sm-12
+								+e.IMG.image(src="img/work-4.svg", alt="#")
+								+e.title.second-font Доставка
+								+e.P.main Бесплатная доставка Вашего документа курьерской службой и&nbsp;Вы оплачиваете нашу работу.
+								+e.P.main Курьерская служба доставляет справки только по&nbsp;рабочим дням!
+								+e.P.main Для Москвы доставка за&nbsp;МКАД возможна с&nbsp;доплатой от&nbsp;500 до&nbsp;1000&nbsp;рублей!
+					+e.col-12.d-xl-none
+						+e.A.btn.btn-city(href="#")
+							img.btn_image(src="img/add.svg", alt="#") 
+							|Заказать документ
+								
+
+	// end s-work

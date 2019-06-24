@@ -1,0 +1,127 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-work/_s-work.pug
+include ../blocks/side-blocks/_side-blocks.pug
+
+block title
+	title Справка в Новосибирске
+
+block pagecontent
+	.main-wrapper(style="background-image: url(../img/header-1.jpg)")
+		//- +mob-mnu()
+
+		+header()
+			+top-line()
+			+top-nav()
+		.header-bg
+			+header-block-city("в Новосибирске")
+
+		.container.main
+			+breadcrumb("Главная","Вопрос-ответ")
+			.row
+				.col-xl.middle-col
+						img.main-city-img(src="img/novosibirsk.jpg", alt="#")
+						.popular__title.second-font Популярные медицинские справки
+						.popular
+							a.popular__item(href="#")
+								.item__top
+									img(src="img/blank.jpg", alt="#") 
+									.item__bottom 026/у
+							a.popular__item(href="#")
+								.item__top
+									img(src="img/blank.jpg", alt="#") 
+									.item__bottom 095/у
+							a.popular__item(href="#")
+								.item__top
+									img(src="img/blank.jpg", alt="#") 
+									.item__bottom 001гс/у
+							a.popular__item(href="#")
+								.item__top
+									img(src="img/blank.jpg", alt="#") 
+									.item__bottom МСЭ
+							a.popular__item(href="#")
+								.item__top
+									img(src="img/basein.jpg", alt="#") 
+									.item__bottom В бассейн
+							a.popular__item(href="#")
+								.item__top
+									img(src="img/blank.jpg", alt="#") 
+									.item__bottom 002о/у
+							a.popular__item(href="#")
+								.item__top
+									img(src="img/blank.jpg", alt="#") 
+									.item__bottom 027/у
+							a.popular__item(href="#")
+								.item__top
+									img(src="img/blank.jpg", alt="#") 
+									.item__bottom КЭК
+							a.popular__item(href="#")
+								.item__top
+									img(src="img/blank.jpg", alt="#") 
+									.item__bottom В ГАИ
+							a.popular__item(href="#")
+								.item__top
+									img(src="img/blank.jpg", alt="#") 
+									.item__bottom 086/у
+							a.popular__item(href="#")
+								.item__top
+									img(src="img/blank.jpg", alt="#") 
+									.item__bottom 063/у
+							a.popular__item(href="#")
+								.item__top
+									img(src="img/blank.jpg", alt="#") 
+									.item__bottom 082/у
+						+b.section-list.section
+							+e.IMG.logo.logo(src="img/logo.png", alt="#")
+							+e.title.title.second-font Медицинские справки в Москве, Санкт-Петербурге и Новосибирске 
+							+e.OL.list
+								+e.LI.item Роль Медицинских справок в современном мире.
+								+e.LI.item Как получить мед. справку без посещения врачей?
+								+e.LI.item Купить медицинскую справку на нашем сайте.
+								+e.LI.item Доставка Медицинских справок на дом.
+								+e.LI.item Гарантия легальности медицинских справок.
+								+e.LI.item Скидки для постоянных клиентов.
+								+e.LI.item Плюсы работы с нами.
+								+e.LI.item Как мы работаем от заявки до заказа.
+								+e.LI.item Контакты.
+						
+						+news-block-main()
+						
+						+news-block-main()
+
+						+docs-offer()
+						//- +advantages-main-2()
+						
+						+news-block-main()
+						
+						+news-block-main()
+
+						+main-section-info-1()
+
+						+news-block-main()
+
+				.col-xl-auto.order-xl-first.col-md-6
+					+side-nav()
+					+side-ask("Вопрос-ответ")
+					+side-news("Новости и статьи")
+					+side-order-call("Обратный звонок")
+				.col-xl-auto.col-md-6
+					+side-order("Заказать медсправку")
+					+side-search.d-none.d-xl-block()
+					+side-video("Видео о нашей компании")
+					+side-stats()
+					+side-price("Прайс-лист справок")
+					+side-reviews("Последние отзывы")
+					+side-order-deliver()
+					+side-share()
+					
+	
+		+s-work-city()
+		//- +s-content
+		+s-contact-city("г. Новосибирск:","проспект Димитрова, 4/1, офис 505")
+		+footer()
+		+bottom-line()
+
