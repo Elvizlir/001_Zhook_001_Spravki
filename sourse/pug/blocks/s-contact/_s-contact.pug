@@ -12,8 +12,9 @@ mixin s-contact()
 				+e.P.main Обратившись к&nbsp;нам с&nbsp;намерением приобретения документов, Вы&nbsp;гарантированно получаете документы заполненные действующим врачом! Заполнение происходит с&nbsp;учётом требований Министерства здравоохранения РФ. Процесс сотрудничества абсолютно конфиденциален.
 				
 				+e.P.main Доставка в&nbsp;любой населенный пункт России курьерскими службами. Оплата при получении.
-			+e.map.col-xl-auto.col-md-12
-				<script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A292cb3bca8ce18bb87df026d2ebd0ef87c2ee8948c1bc5a256fb055093291014&amp;width=407&amp;height=243&amp;lang=ru_RU&amp;scroll=false"></script>
+			.col-xl-auto.col-md-12
+				+e.map
+					<script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A292cb3bca8ce18bb87df026d2ebd0ef87c2ee8948c1bc5a256fb055093291014&amp;width=407&amp;height=243&amp;lang=ru_RU&amp;scroll=false"></script>
 
 		+b.phone
 			+e.title.second-font Для уточнения всех деталей звоните по телефону:

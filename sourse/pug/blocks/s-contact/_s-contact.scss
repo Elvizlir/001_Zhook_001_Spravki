@@ -19,7 +19,7 @@
 	&__map{
 		display: flex;
 		align-self: center;
-		max-width: rem(420) !important;
+		width: 26.25rem;
 		margin: rem(30) auto;
 		@include media-breakpoint-down(lg) {
 			width: 100%;
