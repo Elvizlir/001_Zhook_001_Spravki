@@ -5,6 +5,7 @@
  	}
  	&__input{
 		//  outline: 0 !important;
+		box-shadow: 0px 3px 8px rgba(0,0,0,0.07);
 		border: rem(1) solid $primary;
 		border-radius: rem(3);
 		resize: none;
@@ -13,7 +14,7 @@
 		padding: rem(10);
 		height: rem(40);
 		 &:hover{
-			 border-color: #666;
+			 border-color: #21ADD0;
 		 }
  	}
  	&__btn{
@@ -89,8 +90,10 @@
 	margin-bottom: rem(20);
 	cursor: pointer;
 	position: relative;
-	padding-left: 35px;
+	padding-left: rem(40);
 	display: inline-block;
+	margin-top: rem(3);
+	margin-right: rem(50);
 	&__input{
 		position: absolute;
 		// opacity: 0;
@@ -107,13 +110,20 @@
 		display: block;
 		top: -1px;
 		// display: inline-block;
-		width: 20px;
-		height: 20px;
-		background-color: $primary;
+		width: 30px;
+		height: 30px;
+		// background-color: $primary;
+		border: 1px solid $primary;
 		@include mt;
 		position: absolute; 
 		margin-right: 10px;
+		background-color: #fff;
 
+	}
+	&__text{
+		font-weight: 400 !important;
+		font-size: rem(14);
+		text-transform: uppercase;
 	}
 	&__input[type="checkbox"] + &__lab{
 		&::after{ 
@@ -130,7 +140,7 @@
 			content: '';
 			position: absolute;
 			@include a-cent;
-			background-color: $success;
+			background-color: #000;
 			opacity: 0;
 			width: 10px;
 			height: 10px;
@@ -154,7 +164,9 @@
 
 
 
+.add-file{
 
+}
 
 // .jq-selectbox{
 // 	max-width: 100%;
@@ -249,4 +261,32 @@
 }
 .select2-container--default .select2-results__option--highlighted[aria-selected]{
 	background-color: $success;
+}
+
+.add-file{
+	display: flex;
+	border: 1px solid #000;
+	align-items: center;
+	width: rem(280);
+	border-style: solid;
+	border-width: 1px;
+	border-color: #F69241;
+	min-height: 40px;
+	padding-left: rem(10);
+	font-size: rem(14);
+	color: #666666;
+	background-color: #fff;
+	position: relative;
+	&__input{
+		@extend .invisible;
+	}
+	&::after{
+		content: "";
+		background-image: url(../img/upload.svg);
+		background-size: cover;
+		width: rem(25);
+		height: rem(25);
+		position: absolute;
+		right: rem(10);
+	}
 }

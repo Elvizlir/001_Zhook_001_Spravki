@@ -32,12 +32,8 @@ mixin in-ch()
 		+e.SPAN.lab
 		block 
 mixin add-file(n)
-	+b.add-file
-		label
-			+e.INPUT.input(name='file', type='file')
-			+e.SPAN.btn 
-			+e.SPAN.text   Прикрепить резюме
-		+e.SPAN.filename 
+	+b.LABEL.add-file  Прикрепить скан паспорта
+		+e.INPUT.input(name='file', type='file')  
 
 
 mixin polite()

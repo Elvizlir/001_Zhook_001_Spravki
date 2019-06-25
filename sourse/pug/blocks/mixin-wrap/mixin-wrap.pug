@@ -370,6 +370,64 @@ mixin main-order-section-2()
 	// /.main-order-section
 
 
+mixin main-order-section-3()
+	//.main-order-section
+	.order-page
+		+b.main-order-section
+			+e.subtitle.h2.second-font ВЫБЕРИТЕ НЕОБХОДИМУЮ СПРАВКУ
+			+form-wrap
+				+e.SELECT.input.form-control
+								option.d-none(disabled selected) Водительская медицинская спрака для ГАИ и ГИБДД
+								option 1
+								option 1
+								option 1
+				span.price-title.h3.second-font СТОИМОСТЬ:
+				span.price.h3.second-font 4500 РУБ.
+			+e.subtitle.h2.second-font ВЫБЕРИТЕ ГОРОД
+			+form-wrap
+				+e.SELECT.input.form-control
+								option.d-none(disabled selected) Выбрать город
+								option 1
+								option 1
+								option 1
+			+e.subtitle.h2.second-font ЗАПОЛНИТЕ НЕОБХОДИМЫЕ ДАННЫЕ
+			.row
+				+e.col.col-12.col-md-6
+					+e.input-title.article-text ФИО ребенка:
+					+form-wrap
+						+input("","Введите полное ФИО ребенка")
+				+e.col.col-12.col-md-6
+					+e.input-title.article-text Дата рождения ребенка:
+					+form-wrap
+						+input("","Введите в формате День/Месяц/Год")
+				+e.col.col-12.col-md-6
+					+e.input-title.article-text Необходимое учебное заведение:
+					+form-wrap
+						+input("","Введите полное название")
+				+e.col.col-12.col-md-6
+					+e.input-title.article-text Адрес по прописке / регистрации:
+					+form-wrap
+						+input("","Введите адрес")
+				+e.col.col-12.col-md-6
+					+e.input-title.article-text Какие сделаны прививки:
+					+form-wrap
+						+ta("Введите данные о прививках (дата, доза, название)")
+				+e.col.col-12.col-md-6
+					+e.input-title.article-text Вы носите очки?
+					+in-rad("radio", "Да")
+					+in-rad("radio", "Нет")
+					+add-file()
+					+e.add-file-text Прикрепите главную страницу и страницу прописки
+			+b.price-btn
+							+e.btn(href="#")
+								img.btn_image(src="img/add.svg", alt="#") 
+								|Заказать документ
+			+e.SPAN.description-attention.article-text Обратите внимание!
+			+e.SPAN.description.article-text Можно какой-то интересный текст, что всё ок! ...  Вам не придётся бегать из одного кабинета в другой, пытаясь сократить время приёма и побыстрее вернуться к своим делам.
+			+e.P.description.article-text Вам не придётся бегать из одного кабинета в другой, пытаясь сократить время приёма и побыстрее вернуться к своим делам.Вам не придётся бегать из одного кабинета в другой, пытаясь сократить время приёма и побыстрее вернуться к своим делам.
+	// /.main-order-section
+
+
 mixin main-section-info-1()
 	//.main-section-info-1
 	+b.main-section-info-1
