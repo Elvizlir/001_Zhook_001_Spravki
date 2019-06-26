@@ -1,0 +1,53 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-work/_s-work.pug
+include ../blocks/side-blocks/_side-blocks.pug
+
+block title
+	title Отзывы наших клиентов
+block pagecontent
+	.main-wrapper(style="background-image: url(img/reviews-header-bg.jpg)")
+		//- +mob-mnu()
+
+		+header()
+			+top-line()
+			+top-nav()
+			+header-block-2("Отзывы наших клиентов","img/reviews.png")
+
+		.container.main
+			+breadcrumb("Главная","Отзывы")
+			.row
+				.col-xl.middle-col
+					+reviews-main-block()
+					+pugin()
+					+leave-feedback-main()
+
+
+
+					
+					
+				.col-xl-auto.order-xl-first.col-md-6
+					+side-nav()
+					+side-from-to("От заявки до заказа")
+					+side-price("Прайс-лист справок")
+					+side-order-call("Обратный звонок")
+					//- +side-video("Видео о нашей компании")
+					//- +side-news("Новости и статьи")
+					//- +side-order-call("Обратный звонок")
+				.col-xl-auto.col-md-6
+					+side-order("Заказать медсправку")
+					+side-search.d-none.d-xl-block()
+					+side-stats()
+					+side-ask("Вопрос-ответ")
+					+side-from-to("От заявки до заказа")
+					+side-share()
+					//- +side-reviews("Последние отзывы")
+					//- +side-order-deliver()
+					//- +side-news("Новости и статьи")
+		//- +s-contact-order()
+		+footer()
+		+bottom-line()
+

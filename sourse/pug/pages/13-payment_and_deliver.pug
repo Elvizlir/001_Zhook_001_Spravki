@@ -1,0 +1,66 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-work/_s-work.pug
+include ../blocks/side-blocks/_side-blocks.pug
+
+block title
+	title Оплата и доставка
+block pagecontent
+	.main-wrapper(style="background-image: url(img/bg1-4.jpg)")
+		//- +mob-mnu()
+
+		+header()
+			+top-line()
+			+top-nav()
+			+header-block-2("Оплата и доставка","img/deliv.png")
+
+		.container.main
+			+breadcrumb("Главная","Оплата и доставка")
+			.row
+				.col-xl.middle-col
+					.h2.second-font.page-title ОПЛАТА И ДОСТАВКА ДОКУМЕНТА
+					p.article-text Обращаясь в&nbsp;нашу компанию, Вы&nbsp;можете забыть о&nbsp;проблемах с&nbsp;оформлением медицинских справок. Компания не&nbsp;требует предоплату. Мы&nbsp;в&nbsp;обязательном порядке предоставляем клиентам возможность предварительно убедиться в&nbsp;том, что медицинская справка не&nbsp;содержит ошибок и&nbsp;неточностей в&nbsp;оформлении. Если Вас все устраивает&nbsp;&mdash; Вы&nbsp;вносите оплату. Если нет&nbsp;&mdash; мы&nbsp;бесплатно исправляем недочеты. Однако такого еще не&nbsp;случалось за&nbsp;время работы в&nbsp;данной сфере.
+					p.article-text При доставке курьером&nbsp;Вы можете рассчитаться наличными. Если&nbsp;же доставка выполняется почтовой службой, то&nbsp;используется наложенный платеж. Доставка по&nbsp;Москве в&nbsp;пределах МКАД осуществляется бесплатно, за&nbsp;пределы МКАД&nbsp;&mdash; от&nbsp;500&nbsp;руб. Адресная доставка по&nbsp;договоренности.
+					p.article-text Оплата выполняется только после проверки. Вы&nbsp;либо проверяете документ на&nbsp;месте, при встрече с&nbsp;представителем компании, либо получаете предварительно макет на&nbsp;утверждение.
+					+check-details()
+					+how-work-section()
+					+b.map-section.section
+						.row
+							+e.col.col-xl-5.col-6.d-none.d-md-block
+								+e.IMG.section-doctor(src="img/section-doctor.png", alt="#")
+							+e.col.col-xl-6.col-md-6.col
+								+e.main
+									+e.title.second-font Заказать справку
+									+e.main-text мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время для подтверждения заказа. Вы&nbsp;получите документ в&nbsp;течение суток!
+									+e.btn(href="#")
+										img.btn_image(src="img/add.svg", alt="#") 
+										|Заказать документ
+
+
+
+					
+					
+				.col-xl-auto.order-xl-first.col-md-6
+					+side-nav()
+					+side-price("Прайс-лист справок")
+					+side-reviews("Последние отзывы")
+					//- +side-video("Видео о нашей компании")
+					//- +side-news("Новости и статьи")
+					//- +side-ask("Вопрос-ответ")
+					//- +side-order-call("Обратный звонок")
+				.col-xl-auto.col-md-6
+					+side-order("Заказать медсправку")
+					+side-search.d-none.d-xl-block()
+					+side-order-deliver()
+					+side-share()
+					//- +side-stats()
+					//- +side-from-to("От заявки до заказа")
+					//- +side-news("Новости и статьи")
+					//- +side-order-call("Обратный звонок")
+		//- +s-contact-order()
+		+footer()
+		+bottom-line()
+

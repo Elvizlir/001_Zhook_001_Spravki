@@ -274,7 +274,7 @@ body {
 .map-section{
 	padding: 0 !important;
 	position: relative;
-	margin-top: rem(100);
+	margin-top: rem(50);
 	margin-bottom: rem(40);
 	color: #fff;
 	&__section-doctor{
@@ -730,6 +730,8 @@ body {
 	height: 100%;
 	background-size: contain;
 	background-repeat: no-repeat;
+	background-position-x: center;
+	background-position-y: top;
 
 }
 

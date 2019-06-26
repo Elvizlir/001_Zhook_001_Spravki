@@ -32,6 +32,8 @@ mixin pugin()
 				a.page-link.page-link-more(href='#') ...
 			li.page-item
 				a.page-link(href='#') 3
+			li.page-item
+				a.page-link(href='#') 4
 
 			li.page-item
 				a.page-link.d-none.d-md-block(href='#') 
@@ -439,5 +441,259 @@ mixin main-section-info-1()
 	// /.main-section-info-1
 
 
+mixin check-details()
+	//.check-details
+	+b.check-details
+		+e.H3.title.second-font ДЛЯ УТОЧНЕНИЯ ВСЕХ ДЕТАЛЕЙ ЗВОНИТЕ ПО ТЕЛЕФОНУ:
+		+e.IMG.image.d-none.d-md-block(src="img/s-contact-image.png", alt="#")
+		+e.item
+			+e.city г. Москва:
+			+e.A.phone.second-font(href="tel:+7(495)108-75-79") +7 (495) 108-75-79
+			+e.city Рязанский проспект, д. 24, корп. 2, оф. 110
+		+e.item
+			+e.city г. Санкт-Петербург:
+			+e.A.phone.second-font(href="tel:+7(495)108-75-79") +7 (495) 108-75-79
+			+e.city ул. Розенштейна, дом 21, оф. 73
+		+e.item
+			+e.city г. Новосибирск:
+			+e.A.phone.second-font(href="tel:+7(495)108-75-79") +7 (495) 108-75-79
+			+e.city проспект Димитрова, 4/1, офис 505
+		+e.P.city.mail-text Для оформления заявки с помощью нашего менеджера, пишите на электронную почту: 
+			|
+			+e.A.mail-link(href="mailto:mail@spravka-1.com") mail@spravka-1.com
+			
+
+	// /.check-details
+
+
+mixin check-details-contacts()
+	//.check-details-contacts
+	.check-details-contacts
+		+b.check-details
+			+e.H2.title.second-font АДРЕСА И ТЕЛЕФОНЫ ФИЛИАЛОВ
+			+e.item
+				+e.city г. Москва, Рязанский проспект, д. 24, корп. 2, оф. 110
+				+e.A.phone.second-font(href="tel:+7(495)108-75-79") +7 (495) 108-75-79
+			+e.item
+				+e.city г. Новосибирск, проспект Димитрова, 4/1, офис 505
+				+e.A.phone.second-font(href="tel:+7(495)108-75-79") +7 (495) 108-75-79
+			+e.item
+				+e.city г. Санкт-Петербург,  ул. Розенштейна, дом 21, оф. 73
+				+e.A.phone.second-font(href="tel:+7(495)108-75-79") +7 (495) 108-75-79
+			+e.item-mail
+				+e.P.city.mail-text Для оформления заявки с помощью нашего менеджера, пишите на электронную почту: 
+				+e.A.mail-link.second-font(href="mailto:mail@spravka-1.com") mail@spravka-1.com
+			
+
+	// /.check-details-contacts
+
+
+
+mixin how-work-section()
+	//.how-work-section
+	+b.s-work.how-work#s-work&attributes(attributes)
+		+e.title.second-font Как мы работаем от заявки до заказа
+		+b.work-items
+			.row
+				+e.col.col-md-6.col-sm-12
+					+e.item
+						+e.IMG.image(src="img/work-1.svg", alt="#")
+						+e.title.second-font Обращение
+						+e.P.main Заполняете заявку на&nbsp;сайте или звоните по&nbsp;телефону:
+					
+						+e.A.phone.second-font(href="tel:+7(495)108-75-79") +7 (495) 108-75-79
+						+e.IMG.arrow(src="img/right-arrow.svg", alt="#")
+				
+				+e.col.col-md-6.col-sm-12
+					+e.item
+						+e.IMG.image(src="img/work-2.svg", alt="#")
+						+e.title.second-font Консультация
+						+e.P.main Ожидайте звонка оператора. Мы&nbsp;уточним все необходимые детали и&nbsp;сразу приступим к&nbsp;оформлению документа.
+						+e.IMG.arrow(src="img/right-arrow.svg", alt="#")
+				
+				+e.col.col-md-6.col-sm-12
+					+e.item
+						+e.IMG.image(src="img/work-3.svg", alt="#")
+						+e.title.second-font Оформление
+						+e.P.main Врач грамотно заполняет и&nbsp;выдаёт официально заполненный мед. документ на&nbsp;законных основаниях.
+						+e.P.main В&nbsp;государственных учреждениях получение справки затянется на&nbsp;неопределенное время, наши специалисты все сделают в&nbsp;течение суток.
+						+e.IMG.arrow(src="img/right-arrow.svg", alt="#")
+				
+				+e.col.col-md-6.col-sm-12
+					+e.item
+						+e.IMG.image(src="img/work-4.svg", alt="#")
+						+e.title.second-font Доставка
+						+e.P.main Бесплатная доставка Вашего документа курьерской службой и&nbsp;Вы оплачиваете нашу работу.
+						+e.P.main Курьерская служба доставляет справки только по&nbsp;рабочим дням!
+						+e.P.main Для Москвы доставка за&nbsp;МКАД возможна с&nbsp;доплатой от&nbsp;500 до&nbsp;1000&nbsp;рублей!
+			
+
+	// /.how-work-section
+
+
+mixin faq-ask-block(t)
+	//.faq-ask-block
+	+b.faq-ask-block
+		+e.H3.title.second-font=t
+		+e.P.main-text Документ требуют от&nbsp;родителей при зачислении детей в&nbsp;образовательное учреждение. Первый раз его от&nbsp;вас потребуют, когда вы&nbsp;решите отдать малыша в&nbsp;детсад. Затем придется предоставить его при оформлении в&nbsp;первый класс. Справка нужна в&nbsp;случае перевода из&nbsp;одного дошкольного учреждения в&nbsp;другое.
+	
+	// /.faq-ask-block
+
+
+mixin reviews-main-block()
+	//.faq-ask-block
+	+b.faq-ask-block
+		+e.date 21.03.2018г.
+		+e.H3.title.second-font Елена, Москва
+		+e.subtitle Детская справка после болезни ребенка
+		+e.P.main-text У&nbsp;нас все работают, поэтому тащить ребенка в&nbsp;поликлинику для оформления медкарты поручили бабушке. Просиживать в&nbsp;таких очередях с&nbsp;внуком&nbsp;&mdash; дело хлопотное и&nbsp;опасное для его здоровья, поэтому сын предложил заказать справку в&nbsp;интернете. У&nbsp;моего поколения отношение к&nbsp;подобным услугам скептическое, но&nbsp;эту клинику ему порекомендовал коллега&nbsp;&mdash; решили попробовать.
+		+e.P.main-text Все вопросы папа решил по&nbsp;телефону, оплатили услугу в&nbsp;тот&nbsp;же день, после бесплатной доставки документа. Для меня это проще, чем искать способы отблагодарить педиатра в&nbsp;поликлинике. Сомневалась в&nbsp;подлинности справки до&nbsp;последнего, но&nbsp;когда и&nbsp;ее, и&nbsp;ребенка без лишних слов приняли в&nbsp;садике&nbsp;&mdash; сомнения развеялись. Благодарю специалистов за&nbsp;профессионализм, через год и&nbsp;для внучки у&nbsp;вас оформлять карту будем!
+	+b.faq-ask-block
+		+e.date 21.03.2018г.
+		+e.H3.title.second-font Елена, Новосибирск
+		+e.subtitle Детская справка после болезни ребенка
+		+e.P.main-text У&nbsp;нас все работают, поэтому тащить ребенка в&nbsp;поликлинику для оформления медкарты поручили бабушке. Просиживать в&nbsp;таких очередях с&nbsp;внуком&nbsp;&mdash; дело хлопотное и&nbsp;опасное для его здоровья, поэтому сын предложил заказать справку в&nbsp;интернете. У&nbsp;моего поколения отношение к&nbsp;подобным услугам скептическое, но&nbsp;эту клинику ему порекомендовал коллега&nbsp;&mdash; решили попробовать.
+	+b.faq-ask-block
+		+e.date 21.03.2018г.
+		+e.H3.title.second-font Александр, Санкт-Петербург
+		+e.subtitle Детская справка после болезни ребенка
+		+e.P.main-text У&nbsp;нас все работают, поэтому тащить ребенка в&nbsp;поликлинику для оформления медкарты поручили бабушке. Просиживать в&nbsp;таких очередях с&nbsp;внуком&nbsp;&mdash; дело хлопотное и&nbsp;опасное для его здоровья, поэтому сын предложил заказать справку в&nbsp;интернете. У&nbsp;моего поколения отношение к&nbsp;подобным услугам скептическое, но&nbsp;эту клинику ему порекомендовал коллега&nbsp;&mdash; решили попробовать.
+		+e.P.main-text Все вопросы папа решил по&nbsp;телефону, оплатили услугу в&nbsp;тот&nbsp;же день, после бесплатной доставки документа. Для меня это проще, чем искать способы отблагодарить педиатра в&nbsp;поликлинике.
+	+b.faq-ask-block
+		+e.date 21.03.2018г.
+		+e.H3.title.second-font Елена, Москва
+		+e.subtitle Детская справка после болезни ребенка
+		+e.P.main-text У&nbsp;нас все работают, поэтому тащить ребенка в&nbsp;поликлинику для оформления медкарты поручили бабушке. Просиживать в&nbsp;таких очередях с&nbsp;внуком&nbsp;&mdash; дело хлопотное и&nbsp;опасное для его здоровья, поэтому сын предложил заказать справку в&nbsp;интернете. У&nbsp;моего поколения отношение к&nbsp;подобным услугам скептическое, но&nbsp;эту клинику ему порекомендовал коллега&nbsp;&mdash; решили попробовать.
+		+e.P.main-text Все вопросы папа решил по&nbsp;телефону, оплатили услугу в&nbsp;тот&nbsp;же день, после бесплатной доставки документа. Для меня это проще, чем искать способы отблагодарить педиатра в&nbsp;поликлинике. Сомневалась в&nbsp;подлинности справки до&nbsp;последнего, но&nbsp;когда и&nbsp;ее, и&nbsp;ребенка без лишних слов приняли в&nbsp;садике&nbsp;&mdash; сомнения развеялись. Благодарю специалистов за&nbsp;профессионализм, через год и&nbsp;для внучки у&nbsp;вас оформлять карту будем!
+	+b.faq-ask-block
+		+e.date 21.03.2018г.
+		+e.H3.title.second-font Елена, Новосибирск
+		+e.subtitle Детская справка после болезни ребенка
+		+e.P.main-text У&nbsp;нас все работают, поэтому тащить ребенка в&nbsp;поликлинику для оформления медкарты поручили бабушке. Просиживать в&nbsp;таких очередях с&nbsp;внуком&nbsp;&mdash; дело хлопотное и&nbsp;опасное для его здоровья, поэтому сын предложил заказать справку в&nbsp;интернете. У&nbsp;моего поколения отношение к&nbsp;подобным услугам скептическое, но&nbsp;эту клинику ему порекомендовал коллега&nbsp;&mdash; решили попробовать.
+	+b.faq-ask-block
+		+e.date 21.03.2018г.
+		+e.H3.title.second-font Александр, Санкт-Петербург
+		+e.subtitle Детская справка после болезни ребенка
+		+e.P.main-text У&nbsp;нас все работают, поэтому тащить ребенка в&nbsp;поликлинику для оформления медкарты поручили бабушке. Просиживать в&nbsp;таких очередях с&nbsp;внуком&nbsp;&mdash; дело хлопотное и&nbsp;опасное для его здоровья, поэтому сын предложил заказать справку в&nbsp;интернете. У&nbsp;моего поколения отношение к&nbsp;подобным услугам скептическое, но&nbsp;эту клинику ему порекомендовал коллега&nbsp;&mdash; решили попробовать.
+		+e.P.main-text Все вопросы папа решил по&nbsp;телефону, оплатили услугу в&nbsp;тот&nbsp;же день, после бесплатной доставки документа. Для меня это проще, чем искать способы отблагодарить педиатра в&nbsp;поликлинике.
+	+b.faq-ask-block
+		+e.date 21.03.2018г.
+		+e.H3.title.second-font Елена, Новосибирск
+		+e.subtitle Детская справка после болезни ребенка
+		+e.P.main-text У&nbsp;нас все работают, поэтому тащить ребенка в&nbsp;поликлинику для оформления медкарты поручили бабушке.
+	+b.faq-ask-block
+		+e.date 21.03.2018г.
+		+e.H3.title.second-font Елена, Новосибирск
+		+e.subtitle Детская справка после болезни ребенка
+		+e.P.main-text У&nbsp;нас все работают, поэтому тащить ребенка в&nbsp;поликлинику для оформления медкарты поручили бабушке. Просиживать в&nbsp;таких очередях с&nbsp;внуком&nbsp;&mdash; дело хлопотное и&nbsp;опасное для его здоровья, поэтому сын предложил заказать справку в&nbsp;интернете. У&nbsp;моего поколения отношение к&nbsp;подобным услугам скептическое, но&nbsp;эту клинику ему порекомендовал коллега&nbsp;&mdash; решили попробовать.
+	
+	// /.faq-ask-block
+
+
+mixin dont-find()
+	//.dont-find
+	+b.dont-find
+		+e.header
+			+e.H3.title.second-font Не нашли ответ на ваш Вопрос?
+			+e.H3.title.second-font Завайте вопрос в данной форме
+		+e.main
+			+form-wrap
+				+input("","Введите Имя")
+				+input("","Введите e-mail")
+				+input("","Введите номер телефона")
+				+ta("Введите Ваш вопрос")
+			+e.A.btn(href="#")
+				img.btn_image(src="img/question.svg", alt="#")
+				|Задать вопрос
+		
+	
+	// /.dont-find
+
+
+mixin leave-feedback-main()
+	//.leave-feedback-main
+	+b.leave-feedback-main
+		+e.header
+			+e.H2.title.second-font ОСТАВЬТЕ ОТЗЫВ О РАБОТЕ С НАШЕЙ КОМПАНИЕЙ
+		+e.main
+			+e.H3.title.second-font ВЫБЕРИТЕ СПРАВКУ
+			+form-wrap
+				+input("","Медицинская карта ребенка (форма 026/у)")
+			+e.H3.title.second-font ВЫБЕРИТЕ ГОРОД
+			+form-wrap
+				+e.SELECT.input.form-control
+					option.d-none(disabled selected) Выбрать город
+					option 1
+					option 1
+					option 1
+			+e.H3.title.second-font ЗАПОЛНИТЕ НЕОБХОДИМЫЕ ДАННЫЕ
+			+e.input-title Ваше имя:
+			+form-wrap
+				+input("","Введите e-mail")
+			+e.input-title Ваша почта:
+			+form-wrap
+				+input("","Введите e-mail")
+			+e.input-title Контактный телефон для связи*:
+			+form-wrap
+				+input("","Введите e-mail")
+			+e.input-title Ваш отзыв:
+			+form-wrap
+				+ta("Введите Ваш вопрос")
+			+e.btn-block
+				+e.A.btn.docs(href="#")
+					img.btn_image(src="img/document.svg", alt="#") 
+					|Оставить отзыв
+		
+	
+	// /.leave-feedback-main
+
+
+mixin ask-a-question()
+	//.ask-a-question
+	+b.ask-a-question
+		+e.H2.title.second-font ЗАДАТЬ ВОПРОС
+		+e.subtitle Для обратной связи заполните форму
+		+form-wrap
+			+input("","Введите имя")
+			+input("","Введите e-mail")
+			+input("","Введите номер телефона")
+			+ta("Введите Ваше сообщение")
+		+e.A.btn(href="#")
+			img.btn_image(src="img/question.svg", alt="#")
+			|Задать вопрос
+	
+	// /.ask-a-question
+
+
+mixin pages()
+	//.pages
+	+b.pages
+			+e.item
+				+e.main-text Оставить отзыв о сотрудничестве вы можете оставить перейдя на станице отзывов
+				+e.A.btn(href="#")
+					img.btn_image(src="img/document.svg", alt="#")
+					|Оставить отзыв
+			+e.item
+				+e.main-text Оставить отзыв о сотрудничестве вы можете оставить перейдя на станице отзывов
+				+e.A.btn(href="#")
+					img.btn_image(src="img/question.svg", alt="#")
+					|Задать вопрос
+			+e.item
+				+e.main-text Оставить отзыв о сотрудничестве вы можете оставить перейдя на станице отзывов
+				+e.A.btn(href="#")
+					img.btn_image(src="img/question.svg", alt="#")
+					|Задать вопрос
+			+e.item
+				+e.main-text Оставить отзыв о сотрудничестве вы можете оставить перейдя на станице отзывов
+				+e.A.btn(href="#")
+					img.btn_image(src="img/question.svg", alt="#")
+					|Задать вопрос
+			
+
+		
+	
+	// /.pages
+
+	
 
 

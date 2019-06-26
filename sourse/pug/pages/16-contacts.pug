@@ -1,0 +1,78 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-work/_s-work.pug
+include ../blocks/side-blocks/_side-blocks.pug
+
+block title
+	title Контакты
+block pagecontent
+	.main-wrapper(style="background-image: url(img/contacts-header-bg.jpg)")
+		//- +mob-mnu()
+
+		+header()
+			+top-line()
+			+top-nav()
+			+header-block-2("Наши контакты","img/contacts-header-image.jpg")
+
+		.container.main
+			+breadcrumb("Главная","Контакты")
+			.row
+				.col-xl.middle-col
+					+check-details-contacts()
+					+b.section-col.section
+							+e.IMG.logo.logo(src="img/logo.png", alt="#")
+							+e.title.title.second-font Оформим сегодня, доставим завтра
+							.row
+								+e.col.col-sm-6
+									+e.IMG.image(src="img/syringe.svg", alt="#")
+									+e.title Не нужно тратить время 
+									+e.main на&nbsp;запись к&nbsp;врачам, сдачу анализов и&nbsp;много других неприятных процедур.
+
+								+e.col.col-sm-6
+									+e.IMG.image(src="img/tickets.svg", alt="#")
+									+e.title Никаких талончиков
+									+e.main номерков, угрюмых взглядов в&nbsp;поликлинике&nbsp;&mdash; наши сотрудники ценят комфорт клиентов!
+							
+								+e.col.col-sm-6
+									+e.IMG.image(src="img/002-clock.svg", alt="#")
+									+e.title Вам не придётся бегать
+									+e.main из&nbsp;одного кабинета в&nbsp;другой, пытаясь сократить время приёма и&nbsp;побыстрее вернуться к&nbsp;своим делам.
+							
+								+e.col.col-sm-6
+									+e.IMG.image(src="img/report.svg", alt="#")
+									+e.title В течение суток
+									+e.main вы&nbsp;получаете необходимые подписи, печати и&nbsp;готовый документ.
+							+e.btn(href="#")
+								img.btn_image(src="img/add.svg", alt="#") 
+								|Заказать документ
+					+ask-a-question()
+
+
+
+					
+					
+				.col-xl-auto.order-xl-first.col-md-6
+					+side-nav()
+					+side-video("Видео о нашей компании")
+					+side-price("Прайс-лист справок")
+					//- +side-from-to("От заявки до заказа")
+					//- +side-order-call("Обратный звонок")
+					//- +side-news("Новости и статьи")
+					//- +side-order-call("Обратный звонок")
+				.col-xl-auto.col-md-6
+					+side-order("Заказать медсправку")
+					+side-search.d-none.d-xl-block()
+					+side-stats()
+					//- +side-ask("Вопрос-ответ")
+					//- +side-from-to("От заявки до заказа")
+					+side-share()
+					//- +side-reviews("Последние отзывы")
+					//- +side-order-deliver()
+					//- +side-news("Новости и статьи")
+		//- +s-contact-order()
+		+footer()
+		+bottom-line()
+

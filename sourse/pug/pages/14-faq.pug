@@ -1,0 +1,58 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-work/_s-work.pug
+include ../blocks/side-blocks/_side-blocks.pug
+
+block title
+	title Часто задаваемые вопросы
+block pagecontent
+	.main-wrapper(style="background-image: url(img/faq-header-bg.jpg)")
+		//- +mob-mnu()
+
+		+header()
+			+top-line()
+			+top-nav()
+			+header-block-2("Часто задаваемые вопросы","img/faq-header-image.png")
+
+		.container.main
+			+breadcrumb("Главная","Вопрос-Ответ")
+			.row
+				.col-xl.middle-col
+					+faq-ask-block("1. Зачем мне и моему ребенку нужна справка 026 у?")
+					+faq-ask-block("2. Зачем мне и моему ребенку нужна справка 026 у?")
+					+faq-ask-block("3. Зачем мне и моему ребенку нужна справка 026 у?")
+					+faq-ask-block("4. Зачем мне и моему ребенку нужна справка 026 у?")
+					+faq-ask-block("5. Зачем мне и моему ребенку нужна справка 026 у?")
+					+faq-ask-block("6. Зачем мне и моему ребенку нужна справка 026 у?")
+					+faq-ask-block("7. Зачем мне и моему ребенку нужна справка 026 у?")
+					+pugin()
+					+dont-find()
+
+
+
+					
+					
+				.col-xl-auto.order-xl-first.col-md-6
+					+side-nav()
+					+side-from-to("От заявки до заказа")
+					+side-order-call("Обратный звонок")
+					+side-video("Видео о нашей компании")
+					//- +side-price("Прайс-лист справок")
+					//- +side-news("Новости и статьи")
+					//- +side-ask("Вопрос-ответ")
+					//- +side-order-call("Обратный звонок")
+				.col-xl-auto.col-md-6
+					+side-order("Заказать медсправку")
+					+side-search.d-none.d-xl-block()
+					+side-stats()
+					+side-reviews("Последние отзывы")
+					//- +side-share()
+					//- +side-order-deliver()
+					//- +side-news("Новости и статьи")
+		//- +s-contact-order()
+		+footer()
+		+bottom-line()
+

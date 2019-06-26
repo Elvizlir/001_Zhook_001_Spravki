@@ -1,0 +1,28 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-work/_s-work.pug
+include ../blocks/side-blocks/_side-blocks.pug
+
+block title
+	title Спасибо
+
+block pagecontent
+	.main-wrapper(style="background-image: url(../img/header-1.jpg)")
+		//- +mob-mnu()
+
+		+header()
+			+top-line()
+			+top-nav()
+		.header-bg
+			+header-block
+
+		.container
+			+pages()
+			
+
+		+footer()
+		+bottom-line()
+
