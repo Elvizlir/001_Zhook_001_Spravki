@@ -44,7 +44,7 @@
 	.menu-item-has-children {
 		position: relative;
 		margin-bottom: rem(5);
-		>a{
+		>a, >.title-js{
 			letter-spacing: rem(1);
 			line-height: rem(26);
 			display: block;
@@ -54,17 +54,20 @@
 			font-size: $h3-font-size;
 			color: #fff;
 			&:hover {
+				cursor: pointer;
 				text-decoration: none;
 			}
 		}
+		
 		.toggle-sub-menu{
+			// @include a-cent(y);
 			cursor: pointer;
 			height: 20px;
 			width: 20px;
 			color: #fff;
 			position: absolute;
 			right: rem(15);
-			top: rem(18);
+			top: rem(12);
 			border: 1px solid;
 			&::before{
 				content: "";

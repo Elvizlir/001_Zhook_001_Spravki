@@ -252,9 +252,14 @@ jQuery(document).ready(function ($) {
 
  
 
-	$(".accordion-menu .menu-item-has-children > a").after('<div class="toggle-sub-menu "></div>');
+	$(".title-js, .accordion-menu .menu-item-has-children > a").after('<div class="toggle-sub-menu "></div>');
 	$(document).on('click', '.toggle-sub-menu', function(){
 			$(this).toggleClass('open').next().slideToggle();
+			// $(this).hide();
+			console.log(1);
+	})
+	$(document).on('click', '.title-js', function(){
+			$(this).next().toggleClass('open').next().slideToggle();
 			// $(this).hide();
 			console.log(1);
 	})

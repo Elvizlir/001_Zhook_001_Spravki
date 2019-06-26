@@ -44,6 +44,11 @@ body {
 	font-size: $small;
 }
 
+.main-thanks {
+	background-color: $primary;
+	padding: rem(25) rem(15) 0;
+}
+
 .main {
 	background-color: #fff;
 	padding: rem(25) rem(15) 0;
@@ -228,6 +233,8 @@ body {
 
 	
 }
+
+
 .h2{
 	line-height: rem(41);
 	font-size: rem(34);
