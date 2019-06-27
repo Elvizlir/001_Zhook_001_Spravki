@@ -670,24 +670,28 @@ mixin pages()
 	+b.pages
 			+e.item
 				+e.main-text Оставить отзыв о сотрудничестве вы можете оставить перейдя на станице отзывов
-				+e.A.btn(href="#")
-					img.btn_image(src="img/document.svg", alt="#")
-					|Оставить отзыв
+				+e.btn-block
+					+e.A.btn(href="#")
+						img.btn_image(src="img/document.svg", alt="#")
+						|Оставить отзыв
 			+e.item
-				+e.main-text Оставить отзыв о сотрудничестве вы можете оставить перейдя на станице отзывов
-				+e.A.btn(href="#")
-					img.btn_image(src="img/question.svg", alt="#")
-					|Задать вопрос
+				+e.main-text Если вы хотите подробнее узнать об условиях оплаты или доставки заходите на страницу
+				+e.btn-block
+					+e.A.btn(href="#")
+						img.btn_image(src="img/005-shipping-and-delivery.svg", alt="#")
+						|Оплата и доставка
 			+e.item
-				+e.main-text Оставить отзыв о сотрудничестве вы можете оставить перейдя на станице отзывов
-				+e.A.btn(href="#")
-					img.btn_image(src="img/question.svg", alt="#")
-					|Задать вопрос
+				+e.main-text Об оформлении наших справок заходите на страницу
+				+e.btn-block
+					+e.A.btn(href="#")
+						img.btn_image(src="img/add.svg", alt="#")
+						|Наши справки
 			+e.item
-				+e.main-text Оставить отзыв о сотрудничестве вы можете оставить перейдя на станице отзывов
-				+e.A.btn(href="#")
-					img.btn_image(src="img/question.svg", alt="#")
-					|Задать вопрос
+				+e.main-text Если у вас есть вопросы на которые вы хотите получить ответ заходите на страницу
+				+e.btn-block
+					+e.A.btn(href="#")
+						img.btn_image(src="img/question.svg", alt="#")
+						|Вопрос-ответ
 			
 
 		

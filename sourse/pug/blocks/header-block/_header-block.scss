@@ -46,7 +46,9 @@
 	&__btn{
 		@extend .btn;
 		@extend .btn-warning;
-		
+		@include media-breakpoint-up(xl) {
+			@include a-cent(y);
+		}
 	}
 
 	@include media-breakpoint-down(lg) {
@@ -91,6 +93,18 @@
 			&::after{
 				display: none;
 			}
+		}
+	}
+
+	&__subtitle{
+		margin-top: rem(15);
+		margin-bottom: rem(15);
+		letter-spacing: 1px;
+
+	}
+	.btn-back{
+		@include media-breakpoint-down(lg){
+			margin-top: rem(20);
 		}
 	}
 	
