@@ -246,18 +246,20 @@ h2{
 	.h2{
 	margin-bottom: rem(20);
 	}
-	&__left-col{
-		padding-left: rem(55) !important;
-		@include media-breakpoint-down(sm) {
-			padding-left: rem(5) !important;
-		}
-	}
 	&__list{
 		margin-bottom: 0;
 		list-style: none;
 		line-height: rem(15);
 		font-size: rem(14);
 		padding-left: rem(30);
+		margin-bottom: rem(30);
+		padding-left: rem(55) !important;
+		@include media-breakpoint-down(xs) {
+			padding-left: rem(15) !important;
+		}
+		@include media-breakpoint-up(md) {
+			columns: 2;
+		}
 	}
 	&__item{
 		position: relative;
@@ -272,9 +274,6 @@ h2{
 		a{
 			color: #000000;
 		}
-	}
-	&__row{
-		margin-bottom: rem(30);
 	}
 }
 
@@ -1034,9 +1033,6 @@ input::-webkit-inner-spin-button {
 	h3{
 		@extend .second-font;
 		@extend .part-title;
-	}
-	img{
-		@extend .main-side-photo;
 	}
 	.docs-info{
 		img{
