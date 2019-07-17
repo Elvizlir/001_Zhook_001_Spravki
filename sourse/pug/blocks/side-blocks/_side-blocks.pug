@@ -446,8 +446,10 @@ mixin side-share()
 mixin side-search()
 	// start side-search
 	+b.side-search.side-block#side-search&attributes(attributes)
-		+e.INPUT.search(type="search" name="q" placeholder="Поиск по сайту")
-		+e.INPUT.submit(type="image" src="img/search.png" alt="#")
+		form
+			+e.INPUT.search(type="search" name="q" placeholder="Поиск по сайту")
+			+e.BUTTON.submit(type="submit" alt="#")
+				img(src="img/search.png")
 	// end side-search
 
 
