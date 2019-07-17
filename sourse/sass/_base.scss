@@ -200,7 +200,7 @@ body {
 			margin-bottom: rem(5);
 		}
 
-		&__title {
+		h2 {
 			padding-right: rem(40);
 			font-size: $h2-font-size;
 			text-align: left;
@@ -208,20 +208,19 @@ body {
 			line-height: rem(41);
 			font-weight: 700;
 			margin-bottom: rem(15);
+			@extend .second-font ;
 		}
 
-		&__main {
+		p, ul {
 			margin-bottom: rem(15);
 			font-size: rem(14);
 			font-weight: 300;
 			line-height: rem(20);
-
 			li {
 				position: relative;
 				list-style: none;
 				line-height: rem(21);
 				margin-bottom: rem(5);
-
 				&::before {
 					content: '-';
 					position: absolute;
@@ -235,12 +234,13 @@ body {
 }
 
 
-.h2{
+h2{
 	line-height: rem(41);
 	font-size: rem(34);
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	font-weight: 700;
+	@extend .second-font;
 }
 .map-nav{
 	.h2{
@@ -337,7 +337,7 @@ body {
 	}
 }
 
-.page-title{
+.page-title, h2{
 	margin-bottom: rem(20);
 }
 
@@ -358,7 +358,7 @@ body {
 	border-color: #E8EDE6;
 }
 
-.article-text{
+p{
 	font-size: rem(14);
 	font-weight: 300;
 	line-height: rem(21);
@@ -419,7 +419,7 @@ body {
 	@include media-breakpoint-down(sm) {
 		float: none;
 	}
-	.doc-mini{
+	img{
 		padding: rem(15);
 		width: 100%;
 		max-width: rem(315);
@@ -455,18 +455,19 @@ body {
 			margin-left: 0;
 		}
 	}
-	&__title{
+	h3{
 		padding-left: rem(18);
 		background-color: #F5F5F5;
 		line-height: rem(31);
     font-size: rem(26);
-    letter-spacing: 1px;
+		letter-spacing: 1px;
+		@extend .second-font;
 	}
-	&__text{
+	p{
 		margin-top: rem(10);
 		padding-left: rem(18);
 	}
-	&__subtext{
+	span{
 		padding-left: rem(18);
 		line-height: 31px;
     font-size: 26px;
@@ -474,6 +475,8 @@ body {
 		letter-spacing: 1px;
 		font-weight: 700;
 		margin-top: rem(10);
+		display: block;
+		@extend .second-font;
 	}
 	.deliver{
 		margin-top: rem(40);
@@ -534,17 +537,18 @@ body {
 		border-color: #E8EDE6;
 		margin-bottom: rem(15);
 	}
-	&__title{
+	h3{
 		font-weight: 700;
 		margin-bottom: rem(15);
+		@extend .second-font;
 	}
-	&__date{
+	span{
 		margin-top: rem(10);
 		float: right;
 		font-weight: 300;
 		font-size: rem(14);
 	}
-	&__subtitle{
+	h5{
 		font-weight: 700;
 		margin-bottom: rem(15);
 	}
@@ -1020,4 +1024,23 @@ input::-webkit-inner-spin-button {
 	padding: 0;
 	clip: rect(0 0 0 0);
 	overflow: hidden;
+}
+
+.content-block{
+	h2{
+		@extend .second-font;
+		@extend .page-title;
+	}
+	h3{
+		@extend .second-font;
+		@extend .part-title;
+	}
+	img{
+		@extend .main-side-photo;
+	}
+	.docs-info{
+		img{
+			@extend .docs-info__image;
+		}
+	}
 }

@@ -9,12 +9,14 @@
 		}
 	}
 	
-	&__city-title{
+	span{
 		color: $primary;
 		margin: 0;
 		padding: 0;
 		display: inline;
 		margin-left: rem(10);
+		@extend .h1;
+		font-weight: 700;
 	}
 	h1{
 		letter-spacing: rem(1);

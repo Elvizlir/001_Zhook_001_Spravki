@@ -32,7 +32,8 @@ mixin header-block-city(c)
 					img(src="img/header-2.jpg", alt="#")
 				+e.col.col-12.col-xl
 					h1 Все Медицинские справки и анализы
-					+e.H1.city-title=c
+					|
+					span=c
 					ul
 						li Официально
 						li Без посещения врачей
@@ -52,7 +53,8 @@ mixin header-block-2(t,i,s)
 	// start header-block
 	+b.header-block-2.header-block#header-block
 		.container
-			+e.title.second-font.h1=t
+			+e.title.second-font.h1
+				h1=t
 				+e.title.subtitle.second-font.h1=s
 			+e.IMG.image.d-none.d-xl-block(src=i, alt="#")
 						

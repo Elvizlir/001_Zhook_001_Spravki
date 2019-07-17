@@ -166,23 +166,24 @@
 		}
 
 	}
-	&__photo{
+	img{
 		width: 100%;
 		height: auto;
 	}
-	&__title{
+	h4{
 		margin-bottom: rem(15);
 		letter-spacing: 1px;
 		font-weight: 700;
 		line-height: rem(24);
+		@extend .second-font;
 	}
-	&__main-text{
+	p{
 		font-weight: 300;
 		line-height: rem(21);
 		font-size: rem(14);
 	}
 
-	&__link{
+	a{
 		text-decoration: none;
 		padding-right: rem(15);
 		display: block;
@@ -211,19 +212,20 @@
 		border-color: #E8EDE6;
 		border-width: 1px;
 	}
-	&__photo{
+	img{
 		width: 100%;
 		height: auto;
 	}
 	&__main{
 		padding: rem(10);
 	}
-	&__title{
+	h4{
 		font-weight: 700;
 		line-height: 24px;
 		margin-bottom: rem(5);
+		@extend .second-font;
 	}
-	&__link{
+	a{
 		text-decoration: none;
 		padding-right: rem(15);
 		font-weight: 300;
@@ -464,26 +466,27 @@
 		padding: rem(30) rem(20);
 		font-size: rem(19);
 	}
-	&__title{ 
+	h3{ 
 		font-weight: 700;
 		letter-spacing: 1px;
 		margin-bottom: rem(10);
 		@include media-breakpoint-down(sm) {
 			font-size: rem(18);
 		}
+		@extend .second-font;
 	}
-	&__main-text{
+	p{
 		font-weight: 300;
 		font-size: rem(14);
 		margin: 0;
 	}
-	&__date{
+	span{
 		float: right;
 		font-weight: 300;
 		font-size: rem(14);
 		padding-top: rem(5);
 	}
-	&__subtitle{
+	h4{
 		font-weight: 700;
 		font-size: rem(14);
 		margin-bottom: rem(15);
@@ -620,9 +623,6 @@
 		line-height: 21px;
 		font-weight: 300;
 		margin-bottom: rem(30);
-	}
-	&__btn-block{
-		
 	}
 	&__btn{
 		width: 100%;

@@ -205,9 +205,9 @@ mixin side-order(t)
 						option 1
 						option 1
 				+ta("Ваши даные по справке")
-			a.btn-side.order(href="#")
-				img.btn_image(src="img/order.svg", alt="#") 
-				|Оформить заказ
+				button.btn-side.order(type="submit")
+					img.btn_image(src="img/order.svg", alt="#") 
+					|Оформить заказ
 
 	// end side-order
 
@@ -219,9 +219,9 @@ mixin side-order-call(t)
 			+form-wrap
 				+input("","Ваш номер телефона")
 				+input("","В какое время Вам удобно?")
-			a.btn-side.order.order-call(href="#")
-				img.btn_image(src="img/002-support.svg", alt="#") 
-				|Перезвоните мне
+				button.btn-side.order.order-call(type="submit")
+					img.btn_image(src="img/002-support.svg", alt="#") 
+					|Перезвоните мне
 
 	// end side-order-call
 
