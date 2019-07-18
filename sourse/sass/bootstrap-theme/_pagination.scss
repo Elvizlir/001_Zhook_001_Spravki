@@ -9,9 +9,9 @@
   position: relative;
   display: block;
   // padding: $pagination-padding-y $pagination-padding-x;
-  margin-left: rem(25);
   line-height: $pagination-line-height;
   color: #CDCDCD;
+  @extend .second-font;
   // background-color: $pagination-bg;
   // border: $pagination-border-width solid $pagination-border-color;
 
@@ -62,6 +62,47 @@
     background-color: $pagination-disabled-bg;
     border-color: $pagination-disabled-border-color;
   }
+
+}
+
+
+.page-numbers {
+  list-style: none;
+  display: flex;
+  font-size: rem(26);
+  font-weight: 700;
+  @extend .second-font;
+  justify-content: center;
+  &:first-child {
+    a {
+      margin-left: 0;
+      @include border-left-radius($border-radius);
+    }
+  }
+  &:last-child {
+    a {
+      @include border-right-radius($border-radius);
+    }
+  }
+
+  &.active a {
+    z-index: 1;
+    color: $primary;
+    border-bottom: 2px solid $primary;
+    // background-color: $pagination-active-bg;
+    // border-color: $pagination-active-border-color;
+  }
+
+  &.disabled a {
+    opacity: .7;
+    color: #CDCDCD;
+    pointer-events: none;
+    // Opinionated: remove the "hand" cursor set previously for .page-link
+    cursor: auto;
+    background-color: $pagination-disabled-bg;
+    border-color: $pagination-disabled-border-color;
+  }
+
 }
 
 .page-next{
